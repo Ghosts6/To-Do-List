@@ -1,0 +1,5 @@
+python-ldap
+django
+whitenoise
+packaging
+django-auth-ldap
