@@ -1,0 +1,313 @@
+[2024-09-13 01:04:41] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:04:52] [ERROR] [django.request:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 01:04:52] [ERROR] [django.server:212] "GET / HTTP/1.1" 500 79469
+[2024-09-13 01:04:52] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 01:04:52] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 2911
+[2024-09-13 01:05:10] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/to_do_list/settings.py changed, reloading.
+[2024-09-13 01:05:10] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:05:14] [ERROR] [django.request:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 01:05:14] [ERROR] [django.server:212] "GET / HTTP/1.1" 500 0
+[2024-09-13 01:05:27] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:05:32] [WARNING] [django.request:241] Not Found: /dadasd
+[2024-09-13 01:05:32] [WARNING] [django.server:212] "GET /dadasd HTTP/1.1" 404 594
+[2024-09-13 01:05:32] [INFO] [django.server:212] "GET /static/css/404.b12af72df915.css HTTP/1.1" 200 316
+[2024-09-13 01:05:32] [INFO] [django.server:212] "GET /static/js/404.886b4f9785a3.js HTTP/1.1" 200 279
+[2024-09-13 01:12:14] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:12:20] [WARNING] [django.request:241] Not Found: /dadasd
+[2024-09-13 01:12:20] [WARNING] [django.server:212] "GET /dadasd HTTP/1.1" 404 671
+[2024-09-13 01:12:20] [INFO] [django.server:212] "GET /static/css/404.ba57d21e39c0.css HTTP/1.1" 200 461
+[2024-09-13 01:12:20] [INFO] [django.server:212] "GET /static/js/404.886b4f9785a3.js HTTP/1.1" 200 279
+[2024-09-13 01:12:20] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 01:12:20] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 671
+[2024-09-13 01:16:26] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:16:29] [WARNING] [django.request:241] Not Found: /dadasd
+[2024-09-13 01:16:29] [WARNING] [django.server:212] "GET /dadasd HTTP/1.1" 404 671
+[2024-09-13 01:16:29] [INFO] [django.server:212] "GET /static/css/404.63c14406bcf9.css HTTP/1.1" 200 498
+[2024-09-13 01:16:33] [WARNING] [django.request:241] Not Found: /dadasd
+[2024-09-13 01:16:33] [WARNING] [django.server:212] "GET /dadasd HTTP/1.1" 404 671
+[2024-09-13 01:18:43] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:18:48] [WARNING] [django.request:241] Not Found: /dadasd
+[2024-09-13 01:18:48] [WARNING] [django.server:212] "GET /dadasd HTTP/1.1" 404 677
+[2024-09-13 01:18:48] [INFO] [django.server:212] "GET /static/css/404.1f8657c3e935.css HTTP/1.1" 200 495
+[2024-09-13 01:21:37] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:21:42] [WARNING] [django.request:241] Not Found: /dadasd
+[2024-09-13 01:21:42] [WARNING] [django.server:212] "GET /dadasd HTTP/1.1" 404 677
+[2024-09-13 01:21:42] [INFO] [django.server:212] "GET /static/css/404.cbbe0868ea3f.css HTTP/1.1" 200 523
+[2024-09-13 01:21:42] [INFO] [django.server:212] "GET /static/js/404.886b4f9785a3.js HTTP/1.1" 200 279
+[2024-09-13 01:21:42] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 01:21:42] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 677
+[2024-09-13 01:22:53] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 01:22:53] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 0
+[2024-09-13 01:33:03] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:33:12] [WARNING] [django.request:241] Not Found: /dadasd
+[2024-09-13 01:33:12] [WARNING] [django.server:212] "GET /dadasd HTTP/1.1" 404 677
+[2024-09-13 01:33:12] [INFO] [django.server:212] "GET /static/css/404.e6b0fe855dd5.css HTTP/1.1" 200 527
+[2024-09-13 01:33:16] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 01:33:16] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 856
+[2024-09-13 01:33:16] [INFO] [django.server:212] "GET /static/css/500.dc8487fe28f3.css HTTP/1.1" 200 800
+[2024-09-13 01:33:16] [INFO] [django.server:212] "GET /static/js/500.61e0d794c346.js HTTP/1.1" 200 428
+[2024-09-13 01:38:57] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:39:01] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 01:39:01] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 856
+[2024-09-13 01:39:01] [INFO] [django.server:212] "GET /static/css/500.2a16a0a45b70.css HTTP/1.1" 200 807
+[2024-09-13 01:39:01] [INFO] [django.server:212] "GET /static/js/500.61e0d794c346.js HTTP/1.1" 200 428
+[2024-09-13 01:39:01] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 01:39:01] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 677
+[2024-09-13 01:44:52] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:45:01] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 01:45:01] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 856
+[2024-09-13 01:45:01] [INFO] [django.server:212] "GET /static/css/500.2a16a0a45b70.css HTTP/1.1" 200 807
+[2024-09-13 01:45:01] [INFO] [django.server:212] "GET /static/js/500.8c1a1a9829f9.js HTTP/1.1" 200 442
+[2024-09-13 01:45:01] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 01:45:01] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 677
+[2024-09-13 01:45:48] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 01:45:48] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 943
+[2024-09-13 01:45:51] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 01:45:51] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 943
+[2024-09-13 01:45:51] [INFO] [django.server:212] "GET /static/css/500.2a16a0a45b70.css HTTP/1.1" 200 807
+[2024-09-13 01:45:51] [INFO] [django.server:212] "GET /static/js/500.8c1a1a9829f9.js HTTP/1.1" 200 442
+[2024-09-13 01:45:52] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 01:45:52] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 677
+[2024-09-13 01:46:27] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:46:31] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 01:46:31] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 943
+[2024-09-13 01:46:31] [INFO] [django.server:212] "GET /static/css/500.2a16a0a45b70.css HTTP/1.1" 200 807
+[2024-09-13 01:46:31] [INFO] [django.server:212] "GET /static/js/500.61e0d794c346.js HTTP/1.1" 200 428
+[2024-09-13 01:46:31] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 01:46:31] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 677
+[2024-09-13 01:55:07] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 01:55:19] [WARNING] [django.request:241] Not Found: /homesdadss/
+[2024-09-13 01:55:19] [WARNING] [django.server:212] "GET /homesdadss/ HTTP/1.1" 404 1163
+[2024-09-13 01:55:19] [INFO] [django.server:212] "GET /static/fav/site.b9aa277fcfc3.webmanifest HTTP/1.1" 200 147
+[2024-09-13 01:55:19] [INFO] [django.server:212] "GET /static/fav/favicon-32x32.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-13 01:55:27] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 01:55:27] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 1429
+[2024-09-13 01:55:27] [INFO] [django.server:212] "GET /static/js/500.3409e1481f8d.js HTTP/1.1" 200 455
+[2024-09-13 02:24:15] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 02:24:24] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 302 0
+[2024-09-13 02:24:24] [INFO] [django.server:212] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4272
+[2024-09-13 02:24:24] [INFO] [django.server:212] "GET /static/admin/css/base.64976e0f7339.css HTTP/1.1" 200 4149
+[2024-09-13 02:24:24] [INFO] [django.server:212] "GET /static/admin/css/dark_mode.ef27a31af300.css HTTP/1.1" 200 669
+[2024-09-13 02:24:24] [INFO] [django.server:212] "GET /static/admin/css/nav_sidebar.269a1bd44627.css HTTP/1.1" 200 625
+[2024-09-13 02:24:24] [INFO] [django.server:212] "GET /static/admin/css/responsive.107cd2690311.css HTTP/1.1" 200 2963
+[2024-09-13 02:24:24] [INFO] [django.server:212] "GET /static/admin/js/theme.ab270f56bb9c.js HTTP/1.1" 200 501
+[2024-09-13 02:24:24] [INFO] [django.server:212] "GET /static/admin/js/nav_sidebar.3b9190d420b1.js HTTP/1.1" 200 690
+[2024-09-13 02:24:24] [INFO] [django.server:212] "GET /static/admin/css/login.586129c60a93.css HTTP/1.1" 200 310
+[2024-09-13 02:24:24] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 02:24:24] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 1163
+[2024-09-13 02:24:31] [INFO] [django.server:212] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2024-09-13 02:24:31] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 200 7149
+[2024-09-13 02:24:31] [INFO] [django.server:212] "GET /static/admin/css/dashboard.e90f2068217b.css HTTP/1.1" 200 185
+[2024-09-13 02:24:31] [INFO] [django.server:212] "GET /static/admin/img/icon-addlink.d519b3bab011.svg HTTP/1.1" 200 178
+[2024-09-13 02:24:31] [INFO] [django.server:212] "GET /static/admin/img/icon-changelink.18d2fd706348.svg HTTP/1.1" 200 252
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11592
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/css/changelists.9237a1ac391b.css HTTP/1.1" 200 1274
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/js/core.cf103cd04ebf.js HTTP/1.1" 200 1278
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/js/admin/RelatedObjectLookups.8609f99b9ab2.js HTTP/1.1" 200 1946
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/js/jquery.init.b7781a0897fc.js HTTP/1.1" 200 194
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/js/vendor/jquery/jquery.min.641dd1437010.js HTTP/1.1" 200 28035
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/js/actions.eac7e3441574.js HTTP/1.1" 200 1614
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/js/prepopulate.bd2361dfd64d.js HTTP/1.1" 200 468
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/js/urlify.ae970a820212.js HTTP/1.1" 200 1969
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/js/vendor/xregexp/xregexp.min.b0439563a5d3.js HTTP/1.1" 200 21896
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/js/filters.0e360b7a9f80.js HTTP/1.1" 200 392
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/img/search.7cf54ff789c6.svg HTTP/1.1" 200 241
+[2024-09-13 02:24:36] [INFO] [django.server:212] "GET /static/admin/img/tooltag-add.e59d620a9742.svg HTTP/1.1" 200 182
+[2024-09-13 02:24:38] [INFO] [django.server:212] "GET /admin/service/userprofile/1/change/ HTTP/1.1" 200 13668
+[2024-09-13 02:24:38] [INFO] [django.server:212] "GET /static/admin/css/forms.3b181cba6653.css HTTP/1.1" 200 1879
+[2024-09-13 02:24:38] [INFO] [django.server:212] "GET /static/admin/js/admin/DateTimeShortcuts.9f6e209cebca.js HTTP/1.1" 200 3030
+[2024-09-13 02:24:38] [INFO] [django.server:212] "GET /static/admin/js/prepopulate_init.6cac7f3105b8.js HTTP/1.1" 200 231
+[2024-09-13 02:24:38] [INFO] [django.server:212] "GET /static/admin/js/change_form.9d8ca4f96b75.js HTTP/1.1" 200 243
+[2024-09-13 02:24:38] [INFO] [django.server:212] "GET /static/admin/js/calendar.f8a5d055eb33.js HTTP/1.1" 200 1826
+[2024-09-13 02:24:38] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 02:24:38] [INFO] [django.server:212] "GET /static/admin/img/icon-viewlink.41eb31f7826e.svg HTTP/1.1" 200 326
+[2024-09-13 02:24:38] [INFO] [django.server:212] "GET /static/admin/css/widgets.0a3765e806b3.css HTTP/1.1" 200 2142
+[2024-09-13 02:24:38] [INFO] [django.server:212] "GET /static/admin/img/icon-calendar.ac7aea671bea.svg HTTP/1.1" 200 411
+[2024-09-13 02:24:43] [INFO] [django.server:212] "GET /admin/service/task/ HTTP/1.1" 200 9854
+[2024-09-13 02:24:43] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 02:24:46] [INFO] [django.server:212] "GET /admin/service/task/add/ HTTP/1.1" 200 12002
+[2024-09-13 02:24:46] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 02:24:52] [INFO] [django.server:212] "GET /admin/service/faq/ HTTP/1.1" 200 9466
+[2024-09-13 02:24:52] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 02:24:54] [INFO] [django.server:212] "GET /admin/service/faq/add/ HTTP/1.1" 200 9667
+[2024-09-13 02:24:54] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 02:24:57] [INFO] [django.server:212] "GET /admin/service/faq/ HTTP/1.1" 200 9466
+[2024-09-13 02:25:00] [ERROR] [django.request:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 02:25:00] [ERROR] [django.server:212] "GET / HTTP/1.1" 500 1429
+[2024-09-13 02:25:00] [INFO] [django.server:212] "GET /static/css/500.2a16a0a45b70.css HTTP/1.1" 200 807
+[2024-09-13 02:25:00] [INFO] [django.server:212] "GET /static/js/500.3409e1481f8d.js HTTP/1.1" 200 455
+[2024-09-13 02:25:01] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-13 02:25:05] [ERROR] [django.request:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 8, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 02:25:05] [ERROR] [django.server:212] "GET / HTTP/1.1" 500 1429
+[2024-09-13 02:25:05] [INFO] [django.server:212] "GET /static/css/500.2a16a0a45b70.css HTTP/1.1" 200 807
+[2024-09-13 02:25:05] [INFO] [django.server:212] "GET /static/js/500.3409e1481f8d.js HTTP/1.1" 200 455
+[2024-09-13 02:25:05] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
