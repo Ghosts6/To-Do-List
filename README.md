@@ -26,7 +26,7 @@ Git
 ### Clone the Repository
 To get started, clone the repository:
 ```sh
-git clone https://github.com/yourusername/to_do_list.git
+git clone https://github.com/Ghosts6/to_do_list
 cd to_do_list
 ```
 ### Install Dependencies
