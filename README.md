@@ -70,17 +70,19 @@ Pull Request: When a pull request is created or updated.
 You can view workflow runs and their status in the Actions tab of the repository on GitHub.
 
 ## 🧩 Endpoints
-Authentication
+### Authentication:
 Sign Up: POST /api/signup/ - Register a new user.
 Login: POST /api/login/ - Authenticate and log in.
 Forgot Password: POST /api/forgot/ - Request a password reset link.
 Reset Password: POST /api/reset/<uidb64>/<token>/ - Reset the user password.
-Task Management
+
+### Task Management:
 List Tasks: GET /api/tasks/ - Retrieve a list of tasks.
 Create Task: POST /api/tasks/ - Add a new task.
 Update Task: PUT /api/tasks/<id>/ - Update an existing task.
 Delete Task: DELETE /api/tasks/<id>/ - Remove a task.
-FAQs
+
+### FAQs:
 List FAQs: GET /api/faqs/ - Retrieve a list of frequently asked questions.
 Add FAQ: POST /api/faqs/ - Create a new FAQ.
 Update FAQ: PUT /api/faqs/<id>/ - Update an existing FAQ.
