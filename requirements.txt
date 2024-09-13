@@ -1,7 +1,0 @@
-Django
-djangorestframework
-django-crispy-forms
-django-environ
-bcrypt
-gunicorn
-whitenoise
