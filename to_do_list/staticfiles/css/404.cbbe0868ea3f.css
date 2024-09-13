@@ -1,0 +1,91 @@
+body {
+    background-color: black;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    position: absolute;
+    margin: 0; 
+    overflow: hidden; 
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+main {
+    left: 50%;
+    top: 50%;
+    width: 50vh;
+    height: 25vh;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;   
+}
+
+.text {
+    width: 145vh;
+    height: 80vh;
+    position: relative;
+    z-index: 999;
+}
+
+.error {
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    border-right: 4px solid var(--blink-color, #008000);
+    font-size: 32px;
+    color: var(--text-color, #dcdcdc);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.6s step-end infinite, typing 3s steps(14, end);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    0%, 100% {border-color: transparent;}
+    50% { border-color: var(--blink-color, #008000); } 
+}
+
+
+.btn {
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    padding: 10px 20px; 
+    border-radius: 15px;
+    border: 2px solid #006400; 
+    background-color: #004d00; 
+    color: #ffffff; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    text-align: center; 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.btn:hover {
+    background-color: #006400; 
+    color: #ffffff; 
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.btn:active {
+    background-color: #003d00; 
+    transform: translate(-50%, -50%) scale(1.05); 
+}
