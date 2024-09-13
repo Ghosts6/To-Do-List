@@ -3,7 +3,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth.models import User
 
-import bcrypt
 import uuid
 
 class UserProfile(models.Model):
@@ -21,14 +20,8 @@ class UserProfile(models.Model):
     )
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True, blank=True)
 
-    def save(self, *args, **kwargs):
-        if self.user.password:
-            hashed_password = bcrypt.hashpw(self.user.password.encode('utf-8'), bcrypt.gensalt())
-            self.user.password = hashed_password.decode('utf-8')
-        super().save(*args, **kwargs)
-
     def __str__(self):
-        return f"{self.name} {self.last_name}"
+        return f"{self.name or self.user.username} {self.user.last_name or ''}"
 
 class Task(models.Model):
     STATUS_CHOICES = (

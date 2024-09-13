@@ -16,7 +16,7 @@ admin.site.register(User, CustomUserAdmin)
 
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ['user', 'date_of_birth', 'gender']
+    list_display = ('user', 'name', 'email', 'gender')
     list_filter = ['gender', 'date_of_birth']  
     search_fields = ['user__username']  
 

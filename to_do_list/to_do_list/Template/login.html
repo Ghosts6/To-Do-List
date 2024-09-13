@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fav/favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
+    <link rel="manifest" href="{% static 'fav/site.webmanifest'%}">
+    <link rel="mask-icon" href="{% static 'fav/safari-pinned-tab.svg'%}" color="#111313">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#111313">
+    <meta name="theme-color" content="#100f0f">
+    <title>Login & sining</title>
+</head>
+<body>
+    <main>
+        <div id="particles-js"></div>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="{% url 'signup_api' %}" method="post" id="signUpForm">
+                    {% csrf_token %}
+                    <h1>Create Account</h1>
+                    <span>or use your email for registration</span>
+                    <div class="input-container">
+                        <input type="text" name="username" placeholder="Username" required />
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password" placeholder="Password" id="passwordSignup" required />
+                        <i class="fas fa-lock" id="S-lock"></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password_confirm" placeholder="Confirm Password" id="confirmPasswordSignup" required />
+                        <i class="fas fa-lock" id="C-lock"></i>
+                    </div>
+                    <input type="text" name="gender" class="gender" placeholder="gender" />
+                    <button class="btn" id="S-btn" type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="{% url 'login_api' %}" method="post" id="loginForm">
+                    {% csrf_token %}
+                    <h1>Login</h1>
+                    <span>or use your account</span>
+                    <div class="input-container">
+                        <input type="text" name="username" placeholder="Username" required />
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password" placeholder="Password" id="loginPassword" required />
+                        <i class="fas fa-lock" id="L-lock"></i>
+                    </div>
+                    <input type="text" name="gender" class="gender" placeholder="gender" />
+                    <a href="../forgot">Forgot your password?</a>
+                    <button class="btn" id="L-btn" type="submit">Login</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>Please login with your credentials</p>
+                        <button class="Lghost" id="signIn">Login</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your details to start your journey with us</p>
+                        <button class="Sghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="{% static 'js/particles.js' %}"></script>
+    <script src="{% static 'js/login.js'%}"></script>
+</body>
+</html>

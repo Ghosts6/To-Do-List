@@ -311,3 +311,502 @@ django.template.exceptions.TemplateDoesNotExist: home.html
 [2024-09-13 02:25:05] [INFO] [django.server:212] "GET /static/css/500.2a16a0a45b70.css HTTP/1.1" 200 807
 [2024-09-13 02:25:05] [INFO] [django.server:212] "GET /static/js/500.3409e1481f8d.js HTTP/1.1" 200 455
 [2024-09-13 02:25:05] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-13 15:27:22] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 15:27:26] [ERROR] [django.request:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 15:27:26] [ERROR] [django.server:212] "GET / HTTP/1.1" 500 1482
+[2024-09-13 15:27:26] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-13 15:27:35] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-13 15:27:56] [ERROR] [django.request:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 15:27:56] [ERROR] [django.server:212] "GET / HTTP/1.1" 500 1492
+[2024-09-13 15:27:56] [INFO] [django.server:212] "GET /static/js/500.2f833874b2f9.js HTTP/1.1" 200 108
+[2024-09-13 15:28:03] [WARNING] [django.request:241] Not Found: /dasdsa
+[2024-09-13 15:28:03] [WARNING] [django.server:212] "GET /dasdsa HTTP/1.1" 404 1169
+[2024-09-13 15:28:03] [INFO] [django.server:212] "GET /static/css/404.e6b0fe855dd5.css HTTP/1.1" 200 527
+[2024-09-13 15:28:08] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 15:28:08] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 1492
+[2024-09-13 16:12:53] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:12:57] [ERROR] [django.request:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 16:12:57] [ERROR] [django.server:212] "GET / HTTP/1.1" 500 1492
+[2024-09-13 16:12:57] [INFO] [django.server:212] "GET /static/css/500.2a16a0a45b70.css HTTP/1.1" 200 807
+[2024-09-13 16:12:57] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-13 16:12:57] [INFO] [django.server:212] "GET /static/js/500.2f833874b2f9.js HTTP/1.1" 200 108
+[2024-09-13 16:13:03] [WARNING] [django.request:241] Not Found: /login/
+[2024-09-13 16:13:03] [WARNING] [django.server:212] "GET /login/ HTTP/1.1" 404 1169
+[2024-09-13 16:13:17] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/urls.py changed, reloading.
+[2024-09-13 16:13:17] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:13:20] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 302 0
+[2024-09-13 16:13:20] [INFO] [django.server:212] "GET /home HTTP/1.1" 301 0
+[2024-09-13 16:13:20] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 16:13:20] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 1492
+[2024-09-13 16:13:38] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 200 7149
+[2024-09-13 16:13:38] [INFO] [django.server:212] "GET /static/admin/css/base.64976e0f7339.css HTTP/1.1" 200 4149
+[2024-09-13 16:13:38] [INFO] [django.server:212] "GET /static/admin/css/dark_mode.ef27a31af300.css HTTP/1.1" 200 669
+[2024-09-13 16:13:38] [INFO] [django.server:212] "GET /static/admin/css/dashboard.e90f2068217b.css HTTP/1.1" 200 185
+[2024-09-13 16:13:38] [INFO] [django.server:212] "GET /static/admin/css/responsive.107cd2690311.css HTTP/1.1" 200 2963
+[2024-09-13 16:13:38] [INFO] [django.server:212] "GET /static/admin/css/nav_sidebar.269a1bd44627.css HTTP/1.1" 200 625
+[2024-09-13 16:13:38] [INFO] [django.server:212] "GET /static/admin/img/icon-addlink.d519b3bab011.svg HTTP/1.1" 200 178
+[2024-09-13 16:13:38] [INFO] [django.server:212] "GET /static/admin/img/icon-changelink.18d2fd706348.svg HTTP/1.1" 200 252
+[2024-09-13 16:13:38] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 16:13:38] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 1169
+[2024-09-13 16:13:41] [INFO] [django.server:212] "POST /admin/logout/ HTTP/1.1" 200 3654
+[2024-09-13 16:13:45] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4542
+[2024-09-13 16:13:45] [INFO] [django.server:212] "GET /static/css/login.c95d5aa912b0.css HTTP/1.1" 200 1129
+[2024-09-13 16:13:45] [INFO] [django.server:212] "GET /static/js/login.b05909b830db.js HTTP/1.1" 200 1516
+[2024-09-13 16:14:05] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4542
+[2024-09-13 16:14:05] [INFO] [django.server:212] "GET /static/css/login.c95d5aa912b0.css HTTP/1.1" 200 1129
+[2024-09-13 16:14:05] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-13 16:14:05] [INFO] [django.server:212] "GET /static/js/login.b05909b830db.js HTTP/1.1" 200 1516
+[2024-09-13 16:14:06] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-13 16:15:04] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:20:07] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:20:10] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:20:10] [INFO] [django.server:212] "GET /static/css/login.1c0cc8c804f6.css HTTP/1.1" 200 1148
+[2024-09-13 16:22:09] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:22:11] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:22:11] [INFO] [django.server:212] "GET /static/css/login.1721c969e6c5.css HTTP/1.1" 200 1134
+[2024-09-13 16:22:11] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-13 16:22:11] [INFO] [django.server:212] "GET /static/js/login.b05909b830db.js HTTP/1.1" 200 1516
+[2024-09-13 16:22:12] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-13 16:23:23] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4549
+[2024-09-13 16:24:01] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4549
+[2024-09-13 16:24:02] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4549
+[2024-09-13 16:24:02] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4549
+[2024-09-13 16:24:20] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:26:58] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:27:01] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:27:01] [INFO] [django.server:212] "GET /static/css/login.f674594db6bc.css HTTP/1.1" 200 1142
+[2024-09-13 16:27:01] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-13 16:30:15] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:30:19] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:30:19] [INFO] [django.server:212] "GET /static/js/login.e716d2428053.js HTTP/1.1" 200 1528
+[2024-09-13 16:30:21] [WARNING] [django.request:241] Bad Request: /login_api/
+[2024-09-13 16:30:21] [WARNING] [django.server:212] "POST /login_api/ HTTP/1.1" 400 41
+[2024-09-13 16:33:53] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:33:56] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:33:56] [INFO] [django.server:212] "GET /static/js/login.e1e08cd265ab.js HTTP/1.1" 200 1528
+[2024-09-13 16:34:10] [ERROR] [django.request:241] Internal Server Error: /signup_api/
+[2024-09-13 16:34:10] [ERROR] [django.server:212] "POST /signup_api/ HTTP/1.1" 500 93
+[2024-09-13 16:34:15] [WARNING] [django.request:241] Bad Request: /login_api/
+[2024-09-13 16:34:15] [WARNING] [django.server:212] "POST /login_api/ HTTP/1.1" 400 41
+[2024-09-13 16:39:37] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/models.py changed, reloading.
+[2024-09-13 16:39:37] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:40:02] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py changed, reloading.
+[2024-09-13 16:40:02] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:40:20] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py changed, reloading.
+[2024-09-13 16:40:20] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:40:41] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:40:49] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:40:50] [WARNING] [django.request:241] Bad Request: /login_api/
+[2024-09-13 16:40:50] [WARNING] [django.server:212] "POST /login_api/ HTTP/1.1" 400 61
+[2024-09-13 16:40:52] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:40:52] [INFO] [django.server:212] "GET /static/css/login.f674594db6bc.css HTTP/1.1" 200 1142
+[2024-09-13 16:40:52] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-13 16:40:52] [INFO] [django.server:212] "GET /static/js/login.e1e08cd265ab.js HTTP/1.1" 200 1528
+[2024-09-13 16:40:53] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-13 16:41:03] [INFO] [django.server:212] "POST /login_api/ HTTP/1.1" 200 48
+[2024-09-13 16:41:03] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 16:41:03] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 1492
+[2024-09-13 16:41:10] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 200 7149
+[2024-09-13 16:41:10] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 16:41:12] [INFO] [django.server:212] "POST /admin/logout/ HTTP/1.1" 200 3654
+[2024-09-13 16:41:16] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:41:34] [WARNING] [django.request:241] Bad Request: /signup_api/
+[2024-09-13 16:41:34] [WARNING] [django.server:212] "POST /signup_api/ HTTP/1.1" 400 56
+[2024-09-13 16:42:57] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:43:02] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:43:02] [INFO] [django.server:212] "GET /static/css/login.f674594db6bc.css HTTP/1.1" 200 1142
+[2024-09-13 16:43:02] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-13 16:43:02] [INFO] [django.server:212] "GET /static/js/login.e1e08cd265ab.js HTTP/1.1" 200 1528
+[2024-09-13 16:43:03] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-13 16:43:14] [INFO] [django.server:212] "POST /login_api/ HTTP/1.1" 200 48
+[2024-09-13 16:43:14] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 16:43:14] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 1492
+[2024-09-13 16:43:19] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 200 7149
+[2024-09-13 16:43:20] [INFO] [django.server:212] "POST /admin/logout/ HTTP/1.1" 200 3654
+[2024-09-13 16:43:24] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:43:40] [WARNING] [django.request:241] Bad Request: /signup_api/
+[2024-09-13 16:43:40] [WARNING] [django.server:212] "POST /signup_api/ HTTP/1.1" 400 56
+[2024-09-13 16:43:51] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 302 0
+[2024-09-13 16:43:51] [INFO] [django.server:212] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4272
+[2024-09-13 16:43:51] [INFO] [django.server:212] "GET /static/admin/css/login.586129c60a93.css HTTP/1.1" 200 310
+[2024-09-13 16:43:51] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-13 16:43:51] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 1169
+[2024-09-13 16:44:00] [INFO] [django.server:212] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2024-09-13 16:44:00] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 200 7149
+[2024-09-13 16:44:02] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11694
+[2024-09-13 16:44:02] [INFO] [django.server:212] "GET /static/admin/js/vendor/jquery/jquery.min.641dd1437010.js HTTP/1.1" 200 28035
+[2024-09-13 16:44:02] [INFO] [django.server:212] "GET /static/admin/js/vendor/xregexp/xregexp.min.b0439563a5d3.js HTTP/1.1" 200 21896
+[2024-09-13 16:44:03] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:44:05] [ERROR] [django.request:241] Internal Server Error: /admin/service/userprofile/2/change/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1855, in _changeform_view
+    "subtitle": str(obj) if obj else None,
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/models.py", line 24, in __str__
+    return f"{self.name} {self.last_name}"
+AttributeError: 'UserProfile' object has no attribute 'last_name'
+[2024-09-13 16:44:06] [ERROR] [django.server:212] "GET /admin/service/userprofile/2/change/ HTTP/1.1" 500 1492
+[2024-09-13 16:44:06] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-13 16:44:06] [INFO] [django.server:212] "GET /static/js/500.2f833874b2f9.js HTTP/1.1" 200 108
+[2024-09-13 16:44:11] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11694
+[2024-09-13 16:44:15] [ERROR] [django.request:241] Internal Server Error: /admin/service/userprofile/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 154, in get_deleted_objects
+    to_delete = collector.nested(format_callback)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 221, in nested
+    roots.extend(self._nested(root, seen, format_callback))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 207, in _nested
+    ret = [format_callback(obj)]
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 129, in format_callback
+    no_edit_link = "%s: %s" % (capfirst(opts.verbose_name), obj)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/models.py", line 24, in __str__
+    return f"{self.name} {self.last_name}"
+AttributeError: 'UserProfile' object has no attribute 'last_name'
+[2024-09-13 16:44:16] [ERROR] [django.server:212] "POST /admin/service/userprofile/ HTTP/1.1" 500 1492
+[2024-09-13 16:44:18] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11694
+[2024-09-13 16:45:40] [ERROR] [django.request:241] Internal Server Error: /admin/service/userprofile/1/change/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1855, in _changeform_view
+    "subtitle": str(obj) if obj else None,
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/models.py", line 24, in __str__
+    return f"{self.name} {self.last_name}"
+AttributeError: 'UserProfile' object has no attribute 'last_name'
+[2024-09-13 16:45:40] [ERROR] [django.server:212] "GET /admin/service/userprofile/1/change/ HTTP/1.1" 500 1492
+[2024-09-13 16:45:41] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11694
+[2024-09-13 16:46:22] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/models.py changed, reloading.
+[2024-09-13 16:46:22] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:47:29] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py changed, reloading.
+[2024-09-13 16:47:29] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:48:03] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/admin.py changed, reloading.
+[2024-09-13 16:48:03] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:48:23] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:48:28] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11842
+[2024-09-13 16:48:28] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:48:30] [ERROR] [django.request:241] Internal Server Error: /admin/service/userprofile/2/change/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1855, in _changeform_view
+    "subtitle": str(obj) if obj else None,
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/models.py", line 24, in __str__
+    return f"{self.name} {self.last_name}"
+AttributeError: 'UserProfile' object has no attribute 'last_name'
+[2024-09-13 16:48:30] [ERROR] [django.server:212] "GET /admin/service/userprofile/2/change/ HTTP/1.1" 500 1492
+[2024-09-13 16:50:28] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/models.py changed, reloading.
+[2024-09-13 16:50:28] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:50:37] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:50:41] [INFO] [django.server:212] "GET /admin/service/userprofile/2/home HTTP/1.1" 301 0
+[2024-09-13 16:50:41] [INFO] [django.server:212] "GET /admin/service/userprofile/2/home/ HTTP/1.1" 302 0
+[2024-09-13 16:50:41] [INFO] [django.server:212] "GET /admin/service/userprofile/2/home/change/ HTTP/1.1" 302 0
+[2024-09-13 16:50:41] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 200 7329
+[2024-09-13 16:50:41] [INFO] [django.server:212] "GET /static/admin/img/icon-alert.034cc7d8a67f.svg HTTP/1.1" 200 297
+[2024-09-13 16:50:44] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 200 7149
+[2024-09-13 16:50:45] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11842
+[2024-09-13 16:50:45] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:50:47] [INFO] [django.server:212] "GET /admin/service/userprofile/1/change/ HTTP/1.1" 200 14535
+[2024-09-13 16:50:47] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:50:47] [INFO] [django.server:212] "GET /static/admin/img/icon-viewlink.41eb31f7826e.svg HTTP/1.1" 200 326
+[2024-09-13 16:50:52] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11842
+[2024-09-13 16:50:53] [INFO] [django.server:212] "GET /admin/service/userprofile/2/change/ HTTP/1.1" 200 14532
+[2024-09-13 16:50:53] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:50:54] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11842
+[2024-09-13 16:50:58] [INFO] [django.server:212] "POST /admin/service/userprofile/ HTTP/1.1" 200 8339
+[2024-09-13 16:50:59] [INFO] [django.server:212] "POST /admin/service/userprofile/ HTTP/1.1" 302 0
+[2024-09-13 16:50:59] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11679
+[2024-09-13 16:50:59] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:51:10] [WARNING] [django.request:241] Bad Request: /signup_api/
+[2024-09-13 16:51:10] [WARNING] [django.server:212] "POST /signup_api/ HTTP/1.1" 400 56
+[2024-09-13 16:51:13] [WARNING] [django.request:241] Bad Request: /signup_api/
+[2024-09-13 16:51:13] [WARNING] [django.server:212] "POST /signup_api/ HTTP/1.1" 400 56
+[2024-09-13 16:51:26] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11537
+[2024-09-13 16:51:26] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:51:28] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11537
+[2024-09-13 16:51:28] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:54:15] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py changed, reloading.
+[2024-09-13 16:54:16] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:54:22] [WARNING] [django.request:241] Bad Request: /signup_api/
+[2024-09-13 16:54:22] [WARNING] [django.server:212] "POST /signup_api/ HTTP/1.1" 400 56
+[2024-09-13 16:54:35] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:54:35] [INFO] [django.server:212] "GET /static/css/login.f674594db6bc.css HTTP/1.1" 200 1142
+[2024-09-13 16:54:35] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-13 16:54:35] [INFO] [django.server:212] "GET /static/js/login.e1e08cd265ab.js HTTP/1.1" 200 1528
+[2024-09-13 16:54:36] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-13 16:54:51] [WARNING] [django.request:241] Bad Request: /signup_api/
+[2024-09-13 16:54:51] [WARNING] [django.server:212] "POST /signup_api/ HTTP/1.1" 400 56
+[2024-09-13 16:54:57] [WARNING] [django.request:241] Bad Request: /signup_api/
+[2024-09-13 16:54:57] [WARNING] [django.server:212] "POST /signup_api/ HTTP/1.1" 400 56
+[2024-09-13 16:55:05] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11537
+[2024-09-13 16:55:05] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:55:06] [INFO] [django.server:212] "GET /admin/service/task/ HTTP/1.1" 200 9854
+[2024-09-13 16:55:06] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:55:06] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11537
+[2024-09-13 16:55:06] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:57:11] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py changed, reloading.
+[2024-09-13 16:57:12] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 16:57:15] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 16:57:29] [INFO] [service.views:134] Received POST request for signup
+[2024-09-13 16:57:29] [WARNING] [service.views:156] Username already exists
+[2024-09-13 16:57:29] [WARNING] [django.request:241] Bad Request: /signup_api/
+[2024-09-13 16:57:29] [WARNING] [django.server:212] "POST /signup_api/ HTTP/1.1" 400 56
+[2024-09-13 16:57:48] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11537
+[2024-09-13 16:57:48] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:57:50] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11537
+[2024-09-13 16:57:50] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:57:50] [INFO] [django.server:212] "GET /admin/service/task/ HTTP/1.1" 200 9854
+[2024-09-13 16:57:50] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:57:51] [INFO] [django.server:212] "GET /admin/auth/user/ HTTP/1.1" 200 12224
+[2024-09-13 16:57:51] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:57:59] [INFO] [django.server:212] "POST /admin/auth/user/ HTTP/1.1" 200 8298
+[2024-09-13 16:58:00] [INFO] [django.server:212] "POST /admin/auth/user/ HTTP/1.1" 302 0
+[2024-09-13 16:58:00] [INFO] [django.server:212] "GET /admin/auth/user/ HTTP/1.1" 200 11946
+[2024-09-13 16:58:00] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:58:04] [INFO] [service.views:134] Received POST request for signup
+[2024-09-13 16:58:05] [ERROR] [service.views:187] Error occurred: UNIQUE constraint failed: service_userprofile.user_id
+[2024-09-13 16:58:05] [ERROR] [django.request:241] Internal Server Error: /signup_api/
+[2024-09-13 16:58:05] [ERROR] [django.server:212] "POST /signup_api/ HTTP/1.1" 500 93
+[2024-09-13 16:58:29] [INFO] [django.server:212] "GET /admin/auth/user/ HTTP/1.1" 200 12222
+[2024-09-13 16:58:29] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:58:30] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11842
+[2024-09-13 16:58:30] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:58:32] [INFO] [django.server:212] "GET /admin/auth/user/ HTTP/1.1" 200 12222
+[2024-09-13 16:58:32] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 16:59:21] [INFO] [django.server:212] "POST /login_api/ HTTP/1.1" 200 48
+[2024-09-13 16:59:21] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 16:59:21] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 1492
+[2024-09-13 16:59:32] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 302 0
+[2024-09-13 16:59:32] [INFO] [django.server:212] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3791
+[2024-09-13 16:59:32] [INFO] [django.server:212] "GET /static/admin/css/login.586129c60a93.css HTTP/1.1" 200 310
+[2024-09-13 16:59:34] [INFO] [django.server:212] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3952
+[2024-09-13 16:59:40] [INFO] [django.server:212] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2024-09-13 16:59:40] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 200 7667
+[2024-09-13 16:59:40] [INFO] [django.server:212] "GET /static/admin/img/icon-deletelink.564ef9dc3854.svg HTTP/1.1" 200 195
+[2024-09-13 16:59:42] [INFO] [django.server:212] "POST /admin/logout/ HTTP/1.1" 200 3654
+[2024-09-13 16:59:49] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 17:01:01] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 17:02:39] [INFO] [django.server:212] "POST /admin/auth/user/ HTTP/1.1" 200 8430
+[2024-09-13 17:02:40] [INFO] [django.server:212] "POST /admin/auth/user/ HTTP/1.1" 302 0
+[2024-09-13 17:02:40] [INFO] [django.server:212] "GET /admin/auth/user/ HTTP/1.1" 200 11946
+[2024-09-13 17:02:40] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 17:02:41] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11537
+[2024-09-13 17:02:41] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 17:02:43] [INFO] [django.server:212] "GET /admin/auth/user/ HTTP/1.1" 200 11812
+[2024-09-13 17:02:43] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 17:02:44] [INFO] [django.server:212] "GET /admin/service/userprofile/ HTTP/1.1" 200 11537
+[2024-09-13 17:02:44] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 17:02:45] [INFO] [django.server:212] "GET /admin/auth/user/ HTTP/1.1" 200 11812
+[2024-09-13 17:02:45] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-13 17:03:19] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py changed, reloading.
+[2024-09-13 17:03:19] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 17:03:31] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py changed, reloading.
+[2024-09-13 17:03:31] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-13 17:03:33] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-13 17:03:49] [INFO] [django.server:212] "POST /signup_api/ HTTP/1.1" 200 74
+[2024-09-13 17:03:49] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: home.html
+[2024-09-13 17:03:49] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 1492

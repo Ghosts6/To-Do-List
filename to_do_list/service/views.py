@@ -104,6 +104,7 @@ def login_signin(request):
         return redirect('../home') 
     return render(request, 'login.html')
 
+@csrf_exempt
 def login_api(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -117,12 +118,10 @@ def login_api(request):
         
         if user is not None:
             login(request, user)
-            if user.is_superuser:
-                return redirect('/admin/')
-            else:
-                return redirect('/')
+            return JsonResponse({'success': True, 'message': 'Login successful'}, status=200)
         else:
-            return JsonResponse({'error': 'Invalid username or password'}, status=400)
+            return JsonResponse({'success': False, 'message': 'Invalid username or password'}, status=400)
+    
     return JsonResponse({'error': 'Only POST requests are allowed'}, status=405)
 
 @csrf_exempt
@@ -132,8 +131,8 @@ def signup_api(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         password_confirm = request.POST.get('password_confirm')
-        gender = request.POST.get('gender') 
-        
+        gender = request.POST.get('gender')
+
         if gender:
             return JsonResponse({'success': False, 'message': 'Bot detected'}, status=400)
 
@@ -148,15 +147,13 @@ def signup_api(request):
 
         if User.objects.filter(email=email).exists():
             return JsonResponse({'success': False, 'message': 'Email already exists'}, status=400)
-   
+
         try:
-            user = User.objects.create(
+            user = User.objects.create_user(
                 username=username,
                 email=email,
-                password=make_password(password)  
+                password=password
             )
-
-            UserProfile.objects.create(user=user, name=username)
 
             user = authenticate(request, username=username, password=password)
             if user is not None:
@@ -164,10 +161,10 @@ def signup_api(request):
                 return JsonResponse({'success': True, 'message': 'User registered and logged in successfully'}, status=200)
             else:
                 return JsonResponse({'success': False, 'message': 'Authentication failed after signup'}, status=400)
-        
+
         except Exception as e:
             return JsonResponse({'success': False, 'message': 'Error: ' + str(e)}, status=500)
-    
+
     return JsonResponse({'error': 'Only POST requests are allowed'}, status=405)
 
 @csrf_exempt
