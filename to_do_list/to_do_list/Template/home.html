@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fav/favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
+    <link rel="manifest" href="{% static 'fav/site.webmanifest'%}">
+    <link rel="mask-icon" href="{% static 'fav/safari-pinned-tab.svg'%}" color="#111313">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#111313">
+    <meta name="theme-color" content="#100f0f">
+    <title>To Do List</title>
+</head>
+<body>
+   <div id="particles-js"></div>
+    <header class="top-bar">
+        <div class="logo-title">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="Logo">
+            </a>
+            <h2>ToDoList</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'faqs' %}">FAQs</a>
+            <a href="{% url 'profile' %}">Profile</a>
+            <a href="{% url 'about_app' %}">About App</a>
+        </nav>
+        <div id="login-status">
+            <button id="login-button" class="login-btn" type="button">Log In</button>
+        </div>
+    </header>
+    <main>
+        <div class="intro">
+            <div class="intro-content">
+                <div class="intro-typing">To Do List project by ghosts6 :</div>
+                <div class="intro-FadeInBottom">
+                    <span>Welcome to the To-Do List App! This project allows users to manage tasks with features for user authentication, task management, and more. It’s built with Django and includes automated testing with GitHub Actions.</span>
+                </div>
+                <div class="icon-container">
+                    <a href="https://github.com/Ghosts6/" target="_blank">
+                        <i class="fab fa-github icon" alt="github"></i>
+                    </a>
+                    <a href="https://kiarashbashokian.com/" target="_blank">
+                        <i class="fas fa-globe icon" alt="personal website"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card left-card">
+                <div class="card-int">
+                    <div class="image-text">
+                    <img src="{% static 'img/logo.png' %}" alt="Sample" class="card-image">
+                    <div class="text">Welcome
+                        <span class="hidden">To the ToDoList App</span>
+                    </div>
+                    </div>
+                </div>
+                <div class="top">
+                    <div class="camera">
+                    <div class="int"></div>
+                    </div>
+                    <div class="speaker"></div>
+                </div>
+            </div>
+            <div class="card right-card">
+                <div class="card-int">
+                    <div class="todo-list">
+                    <div class="text">To Do List:
+                        <span class="hidden">For create task click on start button</span>
+                    </div>
+                    <button class="start-btn">Start</button>
+                    </div>
+                </div>
+                <div class="top">
+                    <div class="camera">
+                    <div class="int"></div>
+                    </div>
+                    <div class="speaker"></div>
+                </div>
+            </div>
+        </div>
+        <div class="why-to-do">
+
+        </div>
+        <div class="task-container" id="task">
+            
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{% static 'js/particles.js' %}"></script>
+    <script src="{% static 'js/home.js'%}"></script>
+</body>
+</html>

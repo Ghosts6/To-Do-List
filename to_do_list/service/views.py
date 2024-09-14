@@ -37,6 +37,7 @@ def create_task(request):
         data = json.loads(request.body.decode('utf-8'))
         title = data.get('title')
         description = data.get('description')
+        category = data.get('category', 'work')  
         user = request.user
 
         if not title:
@@ -45,9 +46,10 @@ def create_task(request):
         task = Task.objects.create(
             title=title,
             description=description,
+            category=category,
             user=user
         )
-        return JsonResponse({'id': task.id, 'title': task.title}, status=201)
+        return JsonResponse({'id': task.id, 'title': task.title, 'category': task.category}, status=201)
     return JsonResponse({'error': 'Only POST requests are allowed'}, status=405)
 
 @csrf_exempt
@@ -71,7 +73,8 @@ def update_task(request, task_id):
             task.status = status
 
         task.save()
-        return JsonResponse({'id': task.id, 'title': task.title}, status=200)
+        return JsonResponse({'id': task.id, 'title': task.title, 'status': task.status}, status=200)
+    
     return JsonResponse({'error': 'Only PUT requests are allowed'}, status=405)
 
 @csrf_exempt
@@ -88,7 +91,7 @@ def delete_task(request, task_id):
 
 def list_tasks(request):
     tasks = Task.objects.filter(user=request.user).order_by('-created_at')
-    task_list = [{'id': task.id, 'title': task.title, 'status': task.status} for task in tasks]
+    task_list = [{'id': task.id, 'title': task.title, 'status': task.status, 'category': task.category} for task in tasks]
     return JsonResponse({'tasks': task_list}, status=200)
 
 def task_detail(request, task_id):
@@ -99,6 +102,7 @@ def task_detail(request, task_id):
             'title': task.title,
             'description': task.description,
             'status': task.status,
+            'category': task.category,
             'created_at': task.created_at,
             'updated_at': task.updated_at
         }

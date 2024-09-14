@@ -1090,3 +1090,73 @@ Traceback (most recent call last):
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: home.html
 [2024-09-14 04:42:59] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 1492
+[2024-09-14 06:49:45] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-14 06:49:50] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 200 9703
+[2024-09-14 06:49:52] [INFO] [django.server:212] "GET /admin/service/task/ HTTP/1.1" 200 10483
+[2024-09-14 06:49:52] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-14 06:49:54] [INFO] [django.server:212] "GET /admin/service/task/add/ HTTP/1.1" 200 12949
+[2024-09-14 06:49:54] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-14 06:52:25] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-14 06:52:30] [INFO] [django.server:212] "GET / HTTP/1.1" 200 4075
+[2024-09-14 06:52:30] [INFO] [django.server:212] "GET /static/css/home.d7116df7a79a.css HTTP/1.1" 200 1674
+[2024-09-14 06:52:30] [INFO] [django.server:212] "GET /static/js/home.0f61a6e15ad2.js HTTP/1.1" 200 634
+[2024-09-14 06:52:30] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-14 06:52:30] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-14 06:53:19] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-14 06:53:19] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-14 06:53:19] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-14 06:54:02] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-14 06:54:04] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-14 06:54:04] [INFO] [django.server:212] "GET /static/css/home.54c163179281.css HTTP/1.1" 200 1670
+[2024-09-14 06:54:04] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-14 06:54:04] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-14 06:54:50] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-14 06:55:05] [INFO] [django.server:212] "GET / HTTP/1.1" 200 4075
+[2024-09-14 06:55:05] [INFO] [django.server:212] "GET /static/css/home.66baabe947b9.css HTTP/1.1" 200 1666
+[2024-09-14 06:55:05] [INFO] [django.server:212] "GET /static/img/logo.3e0c68070678.png HTTP/1.1" 200 127375
+[2024-09-14 06:55:05] [INFO] [django.server:212] "GET /static/js/home.0f61a6e15ad2.js HTTP/1.1" 200 634
+[2024-09-14 06:55:06] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-14 06:55:06] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-14 06:55:11] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-14 06:55:11] [INFO] [django.server:212] "GET /static/css/home.66baabe947b9.css HTTP/1.1" 200 1666
+[2024-09-14 06:55:11] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-14 06:55:12] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-14 06:55:19] [INFO] [django.server:212] "GET /faqs/ HTTP/1.1" 200 1904
+[2024-09-14 06:55:19] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-14 06:55:19] [INFO] [django.server:212] "GET /faqs_api/ HTTP/1.1" 200 940
+[2024-09-14 06:55:19] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-14 06:55:23] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-14 06:55:23] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-14 06:55:23] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-14 06:55:26] [ERROR] [django.request:241] Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 30, in profile
+    return render(request, 'profile.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: profile.html
+[2024-09-14 06:55:26] [ERROR] [django.server:212] "GET /profile/ HTTP/1.1" 500 1492
+[2024-09-14 06:55:29] [ERROR] [django.request:241] Internal Server Error: /about_app/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 25, in about_app
+    return render(request, 'about_app.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: about_app.html
+[2024-09-14 06:55:29] [ERROR] [django.server:212] "GET /about_app/ HTTP/1.1" 500 1492

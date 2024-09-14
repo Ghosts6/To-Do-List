@@ -30,11 +30,21 @@ class Task(models.Model):
         ('completed', 'Completed'),
     )
 
+    CATEGORY_CHOICES = (
+        ('work', 'Work'),
+        ('personal', 'Personal'),
+        ('education', 'Education'),
+        ('management', 'Management'),
+        ('marketing_sales', 'Marketing & Sales'),
+        ('customer_support', 'Customer Support'),
+    )
+
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='work')  
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
