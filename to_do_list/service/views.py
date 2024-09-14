@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.hashers import make_password
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from django.utils.crypto import get_random_string
@@ -20,6 +20,14 @@ import json
 
 def home(request):
     return render(request, 'home.html')
+
+def about_app(request):
+    return render(request, 'about_app.html')
+
+# User profile api
+
+def profile(request):
+    return render(request, 'profile.html')
 
 # Tasks apis
 
@@ -229,6 +237,31 @@ def reset_pass_api(request, uidb64, token):
 
 def reset_pass_page(request, uidb64, token):
     return render(request, 'reset_pass.html')
+
+# User interaction apis
+
+def check_authenticated(request):
+    if request.user.is_authenticated:
+        return JsonResponse({'is_authenticated': True})
+    else:
+        return JsonResponse({'is_authenticated': False})
+    
+def get_user_profile(request):
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            username = profile.name if profile.name else request.user.username
+        except UserProfile.DoesNotExist:
+            username = request.user.username
+        return JsonResponse({'username': username})
+    else:
+        return JsonResponse({'error': 'User not authenticated'}, status=403)
+    
+def logout_view(request):
+    if request.method == "POST":
+        logout(request)
+        return JsonResponse({'success': True})
+    return JsonResponse({'error': 'Invalid request'}, status=400)
 
 # Rest of apis
 

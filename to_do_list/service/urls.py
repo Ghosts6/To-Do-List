@@ -8,6 +8,8 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('', views.home, name='home'),
     path('home/', views.home, name='home'),
+    path('about_app/', views.about_app, name='about_app'),
+    path('profile/', views.profile, name='profile'),
     path('tasks/', views.list_tasks, name='list_tasks'),
     path('tasks/create/', views.create_task, name='create_task'),
     path('tasks/<int:task_id>/update/', views.update_task, name='update_task'),
@@ -21,6 +23,9 @@ urlpatterns = [
     path('forgot/', views.forgot, name='forgot'),
     path('reset_pass_api/<uidb64>/<token>/', views.reset_pass_api, name='reset_pass_api'),
     path('reset_pass_page/<uidb64>/<token>/', views.reset_pass_page, name='reset_pass_page'),
+    path('check_authenticated/', views.check_authenticated, name='check_authenticated'),
+    path('get_user_profile/', views.get_user_profile, name='get_user_profile'),
+    path('logout/', views.logout_view, name='logout'),
     
     re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),  
 ]
