@@ -1160,3 +1160,273 @@ Traceback (most recent call last):
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: about_app.html
 [2024-09-14 06:55:29] [ERROR] [django.server:212] "GET /about_app/ HTTP/1.1" 500 1492
+[2024-09-14 06:56:54] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-14 06:56:57] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-14 06:56:57] [INFO] [django.server:212] "GET /static/css/home.66baabe947b9.css HTTP/1.1" 200 1666
+[2024-09-14 06:56:57] [INFO] [django.server:212] "GET /static/js/home.0f61a6e15ad2.js HTTP/1.1" 200 634
+[2024-09-14 06:56:57] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-14 06:56:58] [INFO] [django.server:212] "GET /static/img/logo.3e0c68070678.png HTTP/1.1" 200 127375
+[2024-09-14 06:56:58] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-14 06:56:58] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-14 06:56:59] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-14 06:57:16] [INFO] [django.server:212] "POST /logout/ HTTP/1.1" 200 17
+[2024-09-14 06:57:16] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-14 06:57:16] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 27
+[2024-09-14 06:57:18] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 200 4543
+[2024-09-14 06:57:28] [INFO] [django.server:212] "POST /login_api/ HTTP/1.1" 200 48
+[2024-09-14 06:57:28] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-14 06:57:28] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-14 06:57:28] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:13:05] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 04:13:15] [INFO] [django.server:212] "GET / HTTP/1.1" 200 4075
+[2024-09-15 04:13:15] [INFO] [django.server:212] "GET /static/css/home.1f570c16ece7.css HTTP/1.1" 200 1754
+[2024-09-15 04:13:15] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-15 04:13:15] [INFO] [django.server:212] "GET /static/js/home.0f61a6e15ad2.js HTTP/1.1" 200 634
+[2024-09-15 04:13:16] [INFO] [django.server:212] "GET /static/img/logo.3e0c68070678.png HTTP/1.1" 200 127375
+[2024-09-15 04:13:16] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:13:16] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /about_app/ HTTP/1.1" 200 7530
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/css/about_app.6f69f655374c.css HTTP/1.1" 200 1058
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/js/about_app.0f61a6e15ad2.js HTTP/1.1" 200 634
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/img/django.0f2ad6827a15.png HTTP/1.1" 200 1294
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/img/html.27b0afc8d706.png HTTP/1.1" 200 1028
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/img/postgresql.52231567c0fb.png HTTP/1.1" 200 1902
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/img/FAQ_API.b395df61f504.png HTTP/1.1" 200 61374
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/img/Django%20REST.94aac4077a1a.png HTTP/1.1" 200 14634
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/img/css.9d089bd0b10b.png HTTP/1.1" 200 1118
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/img/javascript.d8b359bb45cb.png HTTP/1.1" 200 630
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/img/Task_Management_API.c5308818e045.png HTTP/1.1" 200 66555
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/img/Overall_System_Diagram.d55fd658becd.png HTTP/1.1" 200 60639
+[2024-09-15 04:13:21] [INFO] [django.server:212] "GET /static/img/User_Authentication_API.e03c64c4c979.png HTTP/1.1" 200 68593
+[2024-09-15 04:13:22] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:13:22] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:15:39] [INFO] [django.server:212] "GET /about_app/ HTTP/1.1" 200 7611
+[2024-09-15 04:15:39] [INFO] [django.server:212] "GET /static/img/python.6841951dd362.png HTTP/1.1" 200 871
+[2024-09-15 04:15:39] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:15:39] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:20:36] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 04:20:39] [INFO] [django.server:212] "GET /about_app/ HTTP/1.1" 200 7711
+[2024-09-15 04:20:39] [INFO] [django.server:212] "GET /static/css/about_app.e3a1cb9c1849.css HTTP/1.1" 200 1209
+[2024-09-15 04:20:39] [INFO] [django.server:212] "GET /static/js/about_app.e1a96ecef89d.js HTTP/1.1" 200 730
+[2024-09-15 04:20:39] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:20:39] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:21:14] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-15 04:21:15] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:21:15] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:23:53] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 04:23:56] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-15 04:23:56] [INFO] [django.server:212] "GET /static/css/home.7e795e8553c8.css HTTP/1.1" 200 1754
+[2024-09-15 04:23:56] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:23:56] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:24:19] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-15 04:24:19] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:24:19] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:27:02] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4268
+[2024-09-15 04:27:02] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:27:02] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:27:08] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4268
+[2024-09-15 04:27:08] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:27:08] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:30:45] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 04:30:49] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-15 04:30:49] [INFO] [django.server:212] "GET /static/css/home.9a2b57f325b9.css HTTP/1.1" 200 1821
+[2024-09-15 04:30:49] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:30:49] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:30:51] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-15 04:30:51] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:30:51] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:30:54] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-15 04:30:55] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:30:55] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:33:21] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 04:33:24] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-15 04:33:24] [INFO] [django.server:212] "GET /static/css/home.34f794cd2bbb.css HTTP/1.1" 200 1860
+[2024-09-15 04:33:24] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:33:24] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:33:26] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4075
+[2024-09-15 04:33:26] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 04:33:26] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 04:37:37] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 116, in render
+    url = self.url(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 113, in url
+    return self.handle_simple(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 513, in stored_name
+    raise ValueError(
+ValueError: Missing staticfiles manifest entry for 'img/todo-benefits.png'
+[2024-09-15 04:37:37] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 1492
+[2024-09-15 04:37:37] [INFO] [django.server:212] "GET /static/css/500.2a16a0a45b70.css HTTP/1.1" 200 807
+[2024-09-15 04:37:37] [INFO] [django.server:212] "GET /static/js/500.2f833874b2f9.js HTTP/1.1" 200 108
+[2024-09-15 05:02:58] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 05:03:08] [INFO] [django.server:212] "GET /home HTTP/1.1" 301 0
+[2024-09-15 05:03:08] [ERROR] [django.request:241] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/views.py", line 22, in home
+    return render(request, 'home.html')
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 116, in render
+    url = self.url(context)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 113, in url
+    return self.handle_simple(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/templatetags/static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/home/ghost/.local/lib/python3.10/site-packages/django/contrib/staticfiles/storage.py", line 513, in stored_name
+    raise ValueError(
+ValueError: Missing staticfiles manifest entry for 'img/todo-benefits.png'
+[2024-09-15 05:03:08] [ERROR] [django.server:212] "GET /home/ HTTP/1.1" 500 1492
+[2024-09-15 05:03:49] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 05:03:52] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4869
+[2024-09-15 05:03:52] [INFO] [django.server:212] "GET /static/css/home.d5d90e24807e.css HTTP/1.1" 200 1965
+[2024-09-15 05:03:52] [INFO] [django.server:212] "GET /static/img/todo-benefits.e2eea31a5609.png HTTP/1.1" 200 883283
+[2024-09-15 05:03:52] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:03:52] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:06:22] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 05:06:25] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4869
+[2024-09-15 05:06:25] [INFO] [django.server:212] "GET /static/css/home.c7e28760cf5f.css HTTP/1.1" 200 2091
+[2024-09-15 05:06:25] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:06:25] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:06:40] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4863
+[2024-09-15 05:06:40] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:06:40] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:12:48] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 05:12:51] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4863
+[2024-09-15 05:12:51] [INFO] [django.server:212] "GET /static/css/home.6ae93c39e3f7.css HTTP/1.1" 200 1983
+[2024-09-15 05:12:51] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:12:51] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:18:55] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 05:18:57] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4863
+[2024-09-15 05:18:57] [INFO] [django.server:212] "GET /static/css/home.6b83bcd72772.css HTTP/1.1" 200 1980
+[2024-09-15 05:18:57] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:18:57] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:26:07] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 05:26:10] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4863
+[2024-09-15 05:26:10] [INFO] [django.server:212] "GET /static/css/home.b572f8882c6f.css HTTP/1.1" 200 1992
+[2024-09-15 05:26:10] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:26:10] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:27:48] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4863
+[2024-09-15 05:27:48] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:27:48] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:29:11] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4863
+[2024-09-15 05:29:11] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:29:11] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /about_app/ HTTP/1.1" 200 7711
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/python.6841951dd362.png HTTP/1.1" 200 871
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/django.0f2ad6827a15.png HTTP/1.1" 200 1294
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/js/about_app.e1a96ecef89d.js HTTP/1.1" 200 730
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/postgresql.52231567c0fb.png HTTP/1.1" 200 1902
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/Django%20REST.94aac4077a1a.png HTTP/1.1" 200 14634
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/html.27b0afc8d706.png HTTP/1.1" 200 1028
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/javascript.d8b359bb45cb.png HTTP/1.1" 200 630
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/css.9d089bd0b10b.png HTTP/1.1" 200 1118
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/Overall_System_Diagram.d55fd658becd.png HTTP/1.1" 200 60639
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/FAQ_API.b395df61f504.png HTTP/1.1" 200 61374
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/User_Authentication_API.e03c64c4c979.png HTTP/1.1" 200 68593
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /static/img/Task_Management_API.c5308818e045.png HTTP/1.1" 200 66555
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:29:14] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:29:34] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4863
+[2024-09-15 05:29:34] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:29:34] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:31:43] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 05:31:46] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4963
+[2024-09-15 05:31:46] [INFO] [django.server:212] "GET /static/css/home.d3b7beb823bf.css HTTP/1.1" 200 2119
+[2024-09-15 05:31:46] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:31:46] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:31:54] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-15 05:32:07] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4963
+[2024-09-15 05:32:07] [INFO] [django.server:212] "GET /static/css/home.d3b7beb823bf.css HTTP/1.1" 200 2119
+[2024-09-15 05:32:07] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-15 05:32:07] [INFO] [django.server:212] "GET /static/js/home.0f61a6e15ad2.js HTTP/1.1" 200 634
+[2024-09-15 05:32:08] [INFO] [django.server:212] "GET /static/img/logo.3e0c68070678.png HTTP/1.1" 200 127375
+[2024-09-15 05:32:08] [INFO] [django.server:212] "GET /static/img/todo-benefits.e2eea31a5609.png HTTP/1.1" 200 883283
+[2024-09-15 05:32:08] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:32:08] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:32:09] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-15 05:32:30] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 05:32:33] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4963
+[2024-09-15 05:32:33] [INFO] [django.server:212] "GET /static/js/home.8aa092528355.js HTTP/1.1" 200 730
+[2024-09-15 05:32:33] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:32:33] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:34:51] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 5002
+[2024-09-15 05:34:51] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:34:51] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:37:46] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 05:37:50] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4987
+[2024-09-15 05:37:50] [INFO] [django.server:212] "GET /static/css/home.83fdf77555dd.css HTTP/1.1" 200 2144
+[2024-09-15 05:37:50] [INFO] [django.server:212] "GET /static/js/home.01089d8529b4.js HTTP/1.1" 200 763
+[2024-09-15 05:37:50] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:37:50] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:39:38] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-15 05:39:41] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4987
+[2024-09-15 05:39:41] [INFO] [django.server:212] "GET /static/js/home.9e7c2373e1e9.js HTTP/1.1" 200 768
+[2024-09-15 05:39:41] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:39:41] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:40:07] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4987
+[2024-09-15 05:40:07] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:40:07] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:40:14] [INFO] [django.server:212] "GET /faqs/ HTTP/1.1" 200 1904
+[2024-09-15 05:40:14] [INFO] [django.server:212] "GET /static/css/faqs.4a4cf4e35221.css HTTP/1.1" 200 964
+[2024-09-15 05:40:14] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:40:14] [INFO] [django.server:212] "GET /faqs_api/ HTTP/1.1" 200 940
+[2024-09-15 05:40:14] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:40:19] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4987
+[2024-09-15 05:40:19] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:40:19] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:40:23] [INFO] [django.server:212] "GET /about_app/ HTTP/1.1" 200 7711
+[2024-09-15 05:40:23] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:40:23] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-15 05:40:30] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 4987
+[2024-09-15 05:40:30] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-15 05:40:30] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21

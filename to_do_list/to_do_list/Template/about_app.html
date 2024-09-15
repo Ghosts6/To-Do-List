@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/about_app.css'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fav/favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
+    <link rel="manifest" href="{% static 'fav/site.webmanifest'%}">
+    <link rel="mask-icon" href="{% static 'fav/safari-pinned-tab.svg'%}" color="#111313">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#111313">
+    <meta name="theme-color" content="#100f0f">
+    <title>About To-Do App</title>
+</head>
+<body>
+   <div id="particles-js"></div>
+    <header class="top-bar">
+        <div class="logo-title">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="Logo">
+            </a>
+            <h2>ToDoList</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'faqs' %}">FAQs</a>
+            <a href="{% url 'profile' %}">Profile</a>
+            <a href="{% url 'about_app' %}">About App</a>
+        </nav>
+        <div id="login-status">
+            <button id="login-button" class="login-btn" type="button">Log In</button>
+        </div>
+    </header>
+    <main>
+        <section class="tech-stack">
+            <div class="tech-title">
+                <i class="fas fa-tools"></i>
+                <h1>Tech Stack :</h1>
+            </div>
+            <h3>The To-Do List Application is a task management tool built with Django. It features a robust backend with REST API and ORM, and a user-friendly frontend using HTML, CSS, and JavaScript. Manage tasks, authenticate users, reset passwords, and access FAQs with ease.</h3>
+            <div class="backend">
+                <h2>Backend:</h2>
+                <div class="backend-icons">
+                    <img src="{% static 'img/python.png' %}" alt="python">
+                    <img src="{% static 'img/django.png' %}" alt="Django">
+                    <img src="{% static 'img/Django REST.png' %}" alt="Django REST Framework">
+                    <img src="{% static 'img/postgresql.png' %}" alt="PostgreSQL">
+                </div>
+            </div>
+            <div class="frontend">
+                <h2>Frontend:</h2>
+                <div class="frontend-icons">
+                    <img src="{% static 'img/html.png' %}" alt="HTML">
+                    <img src="{% static 'img/css.png' %}" alt="CSS">
+                    <img src="{% static 'img/javascript.png' %}" alt="JavaScript">
+                </div>
+            </div>
+        </section>
+        <section class="api-containers">
+            <div class="container overall">
+                <div class="container-title">
+                    <i class="fas fa-cogs"></i> 
+                    <h2>Full Stack Interaction :</h2>
+                </div>
+                <h3>The overall architecture includes the frontend (HTML/CSS/JavaScript) communicating with the Django API backend, which handles business logic and interacts with the PostgreSQL database.</h3>
+                <ul>
+                    <li>Frontend: HTML/CSS/JavaScript interface for user interaction.</li>
+                    <li>Backend: Django views/APIs interacting with DRF.</li>
+                    <li>Database: PostgreSQL holding user data, tasks, FAQs, and authentication tokens.</li>
+                </ul>
+                <h4>Key Connections:</h4>
+                <ul>
+                    <li>Frontend communicates with the API via AJAX or form submission.</li>
+                    <li>Backend handles requests, applies business logic, and interacts with the database.</li>
+                    <li>Data is persisted in the PostgreSQL database.</li>
+                </ul>
+                <img src="{% static 'img/Overall_System_Diagram.png' %}" class="container-img" alt="Full Stack Interaction">
+            </div>
+            <div class="container authentication">
+                <div class="container-title">
+                    <i class="fas fa-user-lock"></i> 
+                    <h2>User Authentication API :</h2>
+                </div>
+                <h3>This API handles user authentication, including signing up, logging in, and password reset.</h3>
+                <ul>
+                    <li>Frontend: Login form and signup form.</li>
+                    <li>Backend: API endpoints for authentication and user management.</li>
+                    <li>Database: User data, tokens, and profiles stored in PostgreSQL.</li>
+                </ul>
+                <h4>Key Connections:</h4>
+                <ul>
+                    <li>User inputs credentials in UI.</li>
+                    <li>Backend authenticates against user data in PostgreSQL.</li>
+                    <li>Password reset tokens are generated and stored.</li>
+                </ul>
+                <img src="{% static 'img/User_Authentication_API.png' %}" class="container-img" alt="User Authentication">
+            </div>
+            <div class="container faq">
+                <div class="container-title">
+                    <i class="fas fa-question-circle"></i>
+                    <h2>FAQ Management API :</h2>
+                </div>
+                <h3>The FAQ API provides a list of frequently asked questions. The backend serves the data from the FAQ model using Django ORM and DRF.</h3>
+                <ul>
+                    <li>Frontend: User interface to display FAQs.</li>
+                    <li>Backend: Django views serve FAQ data.</li>
+                    <li>Database: FAQ data storage and retrieval.</li>
+                </ul>
+                <h4>Key Connections:</h4>
+                <ul>
+                    <li>Frontend requests FAQ data.</li>
+                    <li>Backend responds with FAQ data.</li>
+                    <li>Frontend displays the FAQ list.</li>
+                </ul>
+                <img src="{% static 'img/FAQ_API.png' %}" class="container-img" alt="FAQ Management">
+            </div>
+            <div class="container task">
+                <div class="container-title">
+                    <i class="fas fa-tasks"></i> 
+                    <h2>Task Management API :</h2>
+                </div>
+                <h3>The task management API handles CRUD operations for tasks in the to-do list.</h3>
+                <ul>
+                    <li>Frontend: Form submission to create or update tasks.</li>
+                    <li>Backend: Django API views handling POST, PUT, DELETE requests.</li>
+                    <li>Database: Tables like Task, User, and associations.</li>
+                </ul>
+                <h4>Key Connections:</h4>
+                <ul>
+                    <li>User inputs tasks via UI.</li>
+                    <li>Backend API processes input and interacts with PostgreSQL.</li>
+                    <li>Frontend renders updated task list.</li>
+                </ul>
+                <img src="{% static 'img/Task_Management_API.png' %}" class="container-img" alt="Task Management">
+            </div>
+        </section>
+    </main>
+    <button id="scrollToTopButton" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{% static 'js/particles.js' %}"></script>
+    <script src="{% static 'js/about_app.js'%}"></script>
+</body>
+</html>

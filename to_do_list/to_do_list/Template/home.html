@@ -71,7 +71,7 @@
                     <div class="text">To Do List:
                         <span class="hidden">For create task click on start button</span>
                     </div>
-                    <button class="start-btn">Start</button>
+                    <button class="start-btn" onclick="scrollToDiv()">Start</button>
                     </div>
                 </div>
                 <div class="top">
@@ -83,12 +83,24 @@
             </div>
         </div>
         <div class="why-to-do">
-
+            <div class="content">
+                <h2><i class="fas fa-list-check"></i> Why Use a To-Do List?</h2>
+                <p class="description">
+                    A To-Do List is a simple yet powerful tool to organize your tasks, boost productivity, and reduce stress. 
+                    By breaking down your goals into actionable items, it helps you stay focused, track your progress, and 
+                    ensure nothing important is missed. Whether for work, personal life, or both, managing your day effectively
+                    starts with a good plan.
+                </p>
+                <div class="image-container">
+                    <img src="{% static 'img/todo-benefits.png' %}" alt="To-Do List Benefits">
+                </div>
+            </div>
         </div>
         <div class="task-container" id="task">
             
         </div>
     </main>
+    <button id="scrollToTopButton" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="{% static 'js/particles.js' %}"></script>
     <script src="{% static 'js/home.js'%}"></script>

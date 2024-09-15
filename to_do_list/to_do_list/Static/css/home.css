@@ -17,6 +17,10 @@
   --overlay-gradient: linear-gradient(to right, #000000, #00ff00); 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--main-bg-color);
   background-size: cover;
@@ -27,6 +31,33 @@ body {
   overflow-x: hidden;
   font-family: Arial, sans-serif;
   color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--main-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-color); 
+  border-radius: 10px; 
+  border: 2px solid var(--main-bg-color); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--link-hover-color); 
+}
+
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: var(--highlight-color) var(--main-bg-color); 
+}
+
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 #particles-js {
@@ -116,14 +147,14 @@ body {
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr; 
-  grid-auto-rows: auto; 
-  gap: 30px; 
-  justify-items: center; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: flex-start; 
+  gap: 150px; 
   padding: 20px;
-  min-height: 50vh;
-  width: 100%;
+  width: 100%; 
+  min-height: 100vh; 
 }
 
 .card {
@@ -275,20 +306,46 @@ main {
 
 .intro {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
   margin-top: 50px;
 }
 
 .left-card {
   transform: rotate(-15deg); 
-  position: fixed;
-  right: 15%;
+  position: absolute;
+  right: 21%;
+  animation: fadeUpLeft 1s ease-in-out;
 }
 
 .right-card {
   transform: rotate(15deg);
-  position: fixed;
-  right: 2.5%;
+  position: relative;
+  right: 8.5%;
+  animation: fadeUpRight 1s ease-in-out;
+}
+
+@keyframes fadeUpLeft {
+  0% {
+    opacity: 0;
+    transform: rotate(-15deg) translateY(20px) translateX(20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-15deg) translateY(0) translateX(0); 
+  }
+}
+
+@keyframes fadeUpRight {
+  0% {
+    opacity: 0;
+    transform: rotate(15deg) translateY(20px) translateX(-20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(15deg) translateY(0) translateX(0); 
+  }
 }
 
 .card-image {
@@ -348,9 +405,8 @@ main {
 
 .intro-content{
     left: 25%;
-    top: 35%;
-    position: absolute;
-    transform: translate(-50%,-50%);
+    position: relative;
+    transform: translate(-50%);
 }
 
 .intro-typing {
@@ -405,4 +461,92 @@ main {
 .icon:hover {
     transform: scale(1.1);  
     color: var(--secondary-highlight);  
+}
+
+.why-to-do {
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%; 
+  text-align: center;
+  color: var(--text-color); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto; 
+}
+
+.why-to-do h2 {
+  font-size: 2.5rem;
+  color: var(--highlight-color); 
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  gap: 15px;
+}
+
+.why-to-do .description {
+  font-size: 1.2rem;
+  color: var(--secondary-highlight); 
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left; 
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.why-to-do h2 i {
+    margin-right: 10px;
+    color: var(--secondary-highlight);
+}
+
+.why-to-do .image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.why-to-do .image-container img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--highlight-color); 
+}
+
+#scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: var(--btn-bg-color); 
+    color: var(--ghost-color); 
+    border: 2px solid var(--btn-border-color); 
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopButton i {
+    font-size: 24px;
+    color: var(--ghost-color); 
+    transition: all 0.3s ease;  
+}
+
+#scrollToTopButton:hover {
+    background-color: var(--btn-hover-color);
+    color: var(--ghost-color); /* White */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);  
+    transform: translateY(-3px);  
+}
+
+#scrollToTopButton:active {
+    background-color: var(--btn-border-color); 
+    transform: translateY(0); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
 }
