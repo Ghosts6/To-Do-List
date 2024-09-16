@@ -15,8 +15,6 @@
   --link-color: #00ff00; 
   --link-hover-color: #ffffff; 
   --overlay-gradient: linear-gradient(to right, #000000, #00ff00); 
-  --soft-blue: #00bfff;
-  --soft-blue-hover: #00bfff96;
 }
 
 html {
@@ -79,8 +77,6 @@ body {
     gap: 20px;
     padding: 10px;
     background-color: var(--main-bg-color);
-    z-index: 999;
-    position: relative;
 }
 
 .logo-title {
@@ -528,16 +524,6 @@ main {
   border: 2px solid var(--highlight-color); 
 }
 
-.to-do {
-  width: 800px;
-  position: absolute;
-  margin-top: -50vh;
-}
-
-.to-do-form {
-  margin-top: 25vh;
-}
-
 .form {
     display: flex;
     flex-direction: column;
@@ -559,7 +545,6 @@ main {
   align-items: center;
   padding-left: 30px;
   color: var(--text-color);
-  margin-left: 15px;
 }
 
 .title::before {
@@ -573,22 +558,9 @@ main {
   animation: pulse 1s linear infinite;
 }
 
-.title::before,
-.title::after {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  left: 0px;
-  background-color: var(--soft-blue);
-}
-
-
 .message {
     font-size: 14.5px;
     color: rgba(255, 255, 255, 0.7);
-    margin: 15px;
 }
 
 .flex {
@@ -599,10 +571,6 @@ main {
 
 .form label {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px;
 }
 
 .form label .input {
@@ -644,36 +612,19 @@ main {
     color: var(--highlight-color);
 }
 
-.signin {
-  margin-left: 15px;
-}
-
-.signin a {
-    color: var(--link-color);
-}
-
-.signin a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
-}
-
 .submit {
   border: none;
   outline: none;
-  width: 50%;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
   transform: .3s ease;
-  background-color: var(--soft-blue);
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
+  background-color: #00bfff;
 }
 
 .submit:hover {
-  background-color: var(--soft-blue-hover);
+  background-color: #00bfff96;
 }
 
 @keyframes pulse {

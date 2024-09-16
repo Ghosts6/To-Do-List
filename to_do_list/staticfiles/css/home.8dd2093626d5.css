@@ -79,8 +79,6 @@ body {
     gap: 20px;
     padding: 10px;
     background-color: var(--main-bg-color);
-    z-index: 999;
-    position: relative;
 }
 
 .logo-title {
@@ -530,12 +528,11 @@ main {
 
 .to-do {
   width: 800px;
-  position: absolute;
-  margin-top: -50vh;
 }
 
 .to-do-form {
-  margin-top: 25vh;
+  position: absolute;
+  margin-top: 100vh;
 }
 
 .form {
@@ -644,10 +641,6 @@ main {
     color: var(--highlight-color);
 }
 
-.signin {
-  margin-left: 15px;
-}
-
 .signin a {
     color: var(--link-color);
 }
@@ -660,16 +653,12 @@ main {
 .submit {
   border: none;
   outline: none;
-  width: 50%;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
   transform: .3s ease;
   background-color: var(--soft-blue);
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
 }
 
 .submit:hover {

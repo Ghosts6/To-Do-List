@@ -15,8 +15,6 @@
   --link-color: #00ff00; 
   --link-hover-color: #ffffff; 
   --overlay-gradient: linear-gradient(to right, #000000, #00ff00); 
-  --soft-blue: #00bfff;
-  --soft-blue-hover: #00bfff96;
 }
 
 html {
@@ -79,8 +77,6 @@ body {
     gap: 20px;
     padding: 10px;
     background-color: var(--main-bg-color);
-    z-index: 999;
-    position: relative;
 }
 
 .logo-title {
@@ -468,19 +464,19 @@ main {
     color: var(--secondary-highlight);  
 }
 
-.task-container,
 .why-to-do {
   padding: 40px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   width: 100%; 
+  text-align: center;
   color: var(--text-color); 
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 150px auto; 
 }
 
-.task-container h2,
 .why-to-do h2 {
   font-size: 2.5rem;
   color: var(--highlight-color); 
@@ -492,7 +488,6 @@ main {
   gap: 15px;
 }
 
-.task-container .description,
 .why-to-do .description {
   font-size: 1.2rem;
   color: var(--secondary-highlight); 
@@ -502,18 +497,10 @@ main {
   font-family: 'Poppins', sans-serif;
 }
 
-.task-container h2 i,
+
 .why-to-do h2 i {
     margin-right: 10px;
     color: var(--secondary-highlight);
-    transition: transform 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-}
-
-.task-container h2 i:hover,
-.why-to-do h2 i:hover {
-    transform: scale(1.1); 
-    color: var(--text-color);
 }
 
 .why-to-do .image-container {
@@ -526,166 +513,6 @@ main {
   border-radius: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border: 2px solid var(--highlight-color); 
-}
-
-.to-do {
-  width: 800px;
-  position: absolute;
-  margin-top: -50vh;
-}
-
-.to-do-form {
-  margin-top: 25vh;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 800px;
-    padding: 20px;
-    border-radius: 20px;
-    position: relative;
-    color: #fff;
-    border: 1px solid var(--btn-border-color);
-}
-
-.title {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-  color: var(--text-color);
-  margin-left: 15px;
-}
-
-.title::before {
-  width: 18px;
-  height: 18px;
-}
-
-.title::after {
-  width: 18px;
-  height: 18px;
-  animation: pulse 1s linear infinite;
-}
-
-.title::before,
-.title::after {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  left: 0px;
-  background-color: var(--soft-blue);
-}
-
-
-.message {
-    font-size: 14.5px;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 15px;
-}
-
-.flex {
-    display: flex;
-    width: 100%;
-    gap: 6px;
-}
-
-.form label {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px;
-}
-
-.form label .input {
-    background-color: var(--input-bg-color);
-    color: var(--text-color);
-    width: 100%;
-    padding: 15px 10px 10px 10px;
-    border-radius: 10px;
-    border: 1px solid var(--btn-border-color);
-    outline: none;
-}
-
-.form label select,
-.form label textarea {
-    background-color: var(--input-bg-color);
-    color: var(--text-color);
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid var(--btn-border-color);
-}
-
-.form label .input + span,
-.form label select + span,
-.form label textarea + span {
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.5);
-    transition: 0.3s ease;
-}
-
-.form label .input:focus + span,
-.form label select:focus + span,
-.form label textarea:focus + span {
-    top: -20px;
-    font-size: 0.8em;
-    color: var(--highlight-color);
-}
-
-.signin {
-  margin-left: 15px;
-}
-
-.signin a {
-    color: var(--link-color);
-}
-
-.signin a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
-}
-
-.submit {
-  border: none;
-  outline: none;
-  width: 50%;
-  padding: 10px;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 16px;
-  transform: .3s ease;
-  background-color: var(--soft-blue);
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-.submit:hover {
-  background-color: var(--soft-blue-hover);
-}
-
-@keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-
-  to {
-    transform: scale(1.8);
-    opacity: 0;
-  }
 }
 
 #scrollToTopButton {

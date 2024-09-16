@@ -79,8 +79,6 @@ body {
     gap: 20px;
     padding: 10px;
     background-color: var(--main-bg-color);
-    z-index: 999;
-    position: relative;
 }
 
 .logo-title {

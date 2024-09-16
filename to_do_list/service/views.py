@@ -11,6 +11,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 
 from service.models import UserProfile, FAQ, PasswordResetToken, Task
 import os
@@ -25,12 +26,13 @@ def about_app(request):
     return render(request, 'about_app.html')
 
 # User profile api
-
+@login_required
 def profile(request):
     return render(request, 'profile.html')
 
 # Tasks apis
 
+@login_required
 @csrf_exempt
 def create_task(request):
     if request.method == 'POST':
@@ -52,6 +54,7 @@ def create_task(request):
         return JsonResponse({'id': task.id, 'title': task.title, 'category': task.category}, status=201)
     return JsonResponse({'error': 'Only POST requests are allowed'}, status=405)
 
+@login_required
 @csrf_exempt
 def update_task(request, task_id):
     if request.method == 'PUT':
@@ -77,6 +80,7 @@ def update_task(request, task_id):
     
     return JsonResponse({'error': 'Only PUT requests are allowed'}, status=405)
 
+@login_required
 @csrf_exempt
 def delete_task(request, task_id):
     if request.method == 'DELETE':
@@ -89,11 +93,13 @@ def delete_task(request, task_id):
         return JsonResponse({'message': 'Task deleted successfully'}, status=200)
     return JsonResponse({'error': 'Only DELETE requests are allowed'}, status=405)
 
+@login_required
 def list_tasks(request):
     tasks = Task.objects.filter(user=request.user).order_by('-created_at')
     task_list = [{'id': task.id, 'title': task.title, 'status': task.status, 'category': task.category} for task in tasks]
     return JsonResponse({'tasks': task_list}, status=200)
 
+@login_required
 def task_detail(request, task_id):
     task = Task.objects.filter(id=task_id, user=request.user).first()
     if task:

@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const csrfToken = getCookie('csrftoken');
     const form = document.querySelector('.form');
     const submitButton = document.querySelector('.submit');
-    const scrollToTopButton = document.getElementById('scrollToTopButton');
 
     function getCookie(name) {
         let cookieValue = null;
@@ -19,38 +18,31 @@ document.addEventListener('DOMContentLoaded', function() {
         return cookieValue;
     }
    
-    async function checkAuthenticated() {
-        try {
-            const response = await fetch('/check_authenticated/');
-            const data = await response.json();
-            const loginStatusDiv = document.getElementById('login-status');
-
-            if (data.is_authenticated) {
-                const userProfileResponse = await fetch('/get_user_profile/');
-                const userData = await userProfileResponse.json();
-                
-                loginStatusDiv.innerHTML = `
-                    <div class="username-logout">
-                        <span>Welcome: ${userData.username}</span>
-                        <button class="logout-btn" id="logout-button">Log Out</button>
-                    </div>`;
-                
-                document.getElementById('logout-button').addEventListener('click', handleLogout);
-                return true;
-            } else {
-                const loginButton = document.getElementById('login-button');
-                if (loginButton) {
+    function checkAuthenticated() {
+        fetch('/check_authenticated/')
+            .then(response => response.json())
+            .then(data => {
+                if (data.is_authenticated) {
+                    fetch('/get_user_profile/')
+                        .then(response => response.json())
+                        .then(userData => {
+                            const loginStatusDiv = document.getElementById('login-status');
+                            loginStatusDiv.innerHTML = `
+                                <div class="username-logout">
+                                    <span>Welcome:${userData.username}</span>
+                                    <button class="logout-btn" id="logout-button">Log Out</button>
+                                </div>`;
+                            document.getElementById('logout-button').addEventListener('click', handleLogout);
+                        });
+                } else {
+                    const loginButton = document.getElementById('login-button');
                     loginButton.innerText = 'Log In';
                     loginButton.addEventListener('click', function() {
                         window.location.href = "../login";
                     });
                 }
-                return false; 
-            }
-        } catch (error) {
-            console.error('Error checking authentication:', error);
-            return false;
-        }
+            })
+            .catch(error => console.error('Error:', error));
     }
 
     function handleLogout() {
@@ -69,13 +61,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
         .catch(error => {
-            console.error("Error during logout:", error);
+            console.error("Error:", error);
         });
     }
 
-    async function handleSubmit(event) {
-        event.preventDefault();
+    checkAuthenticated();
 
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
         const title = form.querySelector('input[type="text"]').value.trim();
         const category = form.querySelector('select').value;
         const description = form.querySelector('textarea').value.trim();
@@ -86,14 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: 'Oops...',
                 text: 'All fields are required!',
             });
-            return;
-        }
-
-        const isAuthenticated = await checkAuthenticated();
-
-        if (!isAuthenticated) {
-            window.location.href = '../login';
-            return;
+            return; 
         }
 
         const taskData = {
@@ -124,22 +110,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     title: 'Task Created',
                     text: 'Your task was created successfully!',
                 });
+
                 form.reset();
             }
         })
         .catch(error => {
-            console.error('Error creating task:', error);
+            console.error('Error:', error);
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
                 text: 'Something went wrong while creating the task.',
             });
         });
-    }
+    });
 
-    checkAuthenticated();
-    form.addEventListener('submit', handleSubmit);
-
+    const scrollToTopButton = document.getElementById('scrollToTopButton');
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/forgot.css'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fav/favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
+    <link rel="manifest" href="{% static 'fav/site.webmanifest'%}">
+    <link rel="mask-icon" href="{% static 'fav/safari-pinned-tab.svg'%}" color="#111313">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#111313">
+    <meta name="theme-color" content="#100f0f">
+    <title>Forgot password</title>
+</head>
+<body>
+   <div id="particles-js"></div>
+    <main>
+        <div class="icons">
+            <i class="fa fa-lock fa-4x"></i>
+            <i class="fa-solid fa-arrow-right" onclick="window.location.href='{% url 'login_signin' %}'"></i>
+        </div>
+        <h1>Forgot your password ?</h1>
+        <h2>For reseting your password enter your email address :</h2>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+            <input id="email" name="email" placeholder="email address" class="form-control" type="email">
+        </div>
+        <button class="btn" id="submit">submit</button>       
+    </main>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="{% static 'js/particles.js' %}"></script>
+    <script src="{% static 'js/forgot.js'%}"></script>
+</body>
+</html>

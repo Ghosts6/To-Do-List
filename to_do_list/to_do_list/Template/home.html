@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/home.css'%}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fav/favicon-32x32.png'%}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
@@ -97,11 +98,46 @@
             </div>
         </div>
         <div class="task-container" id="task">
-            
+            <div class="to-do">
+                <h2><i class="fas fa-clipboard-list"></i> To Do List :</h2>
+                <p class="description">
+                    Create a new task by filling in the details below.
+                </p>
+            </div>         
+            <div class="to-do-form">
+                <form class="form">
+                    <p class="title">New Task</p>
+                    <p class="message">Please fill out the form to create a new task.</p>
+
+                    <label>
+                        <input class="input" type="text" placeholder="Enter task title" required="">
+                        <span>Task Title</span>
+                    </label>
+                    <label>
+                        <select class="input" required="">
+                            <option value="" disabled selected>Select category</option>
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                            <option value="education">Education</option>
+                            <option value="management">Management</option>
+                            <option value="marketing_sales">Marketing & Sales</option>
+                            <option value="customer_support">Customer Support</option>
+                        </select>
+                        <span>Category</span>
+                    </label>
+                    <label>
+                        <textarea class="input" placeholder="Enter task description" required=""></textarea>
+                        <span>Task Description</span>
+                    </label>
+                    <button class="submit">Create Task</button>
+                    <p class="signin">Manage tasks: <a href="{% url 'profile' %}">Profile</a></p>
+                </form>
+            </div>
         </div>
     </main>
     <button id="scrollToTopButton" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script src="{% static 'js/particles.js' %}"></script>
     <script src="{% static 'js/home.js'%}"></script>
 </body>

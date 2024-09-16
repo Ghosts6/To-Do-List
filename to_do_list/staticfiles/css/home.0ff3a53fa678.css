@@ -79,8 +79,6 @@ body {
     gap: 20px;
     padding: 10px;
     background-color: var(--main-bg-color);
-    z-index: 999;
-    position: relative;
 }
 
 .logo-title {
@@ -660,7 +658,7 @@ main {
 .submit {
   border: none;
   outline: none;
-  width: 50%;
+  width: 90%;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
