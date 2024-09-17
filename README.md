@@ -87,3 +87,13 @@ List FAQs: GET /api/faqs/ - Retrieve a list of frequently asked questions.
 Add FAQ: POST /api/faqs/ - Create a new FAQ.
 Update FAQ: PUT /api/faqs/<id>/ - Update an existing FAQ.
 Delete FAQ: DELETE /api/faqs/<id>/ - Remove an FAQ.
+
+
+## ⚠️ Project Limitations and Goals
+### Warning: This project is not designed to be responsive.
+The primary focus of this project is to demonstrate the interaction between the API, JSON data, and Django models. The current implementation does not include responsive design features, which means that the user interface may not adapt well to different screen sizes or devices.
+
+### Key Points:
+- **Main Goal**: The project is intended to work with API endpoints and handle JSON data effectively.
+- **Models**: It showcases the usage of Django models for task management and user authentication.
+- **UI Design**: Responsive design and cross-device compatibility are not addressed in this project.

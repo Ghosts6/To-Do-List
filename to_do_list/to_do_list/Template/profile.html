@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/profile.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fav/favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
+    <link rel="manifest" href="{% static 'fav/site.webmanifest'%}">
+    <link rel="mask-icon" href="{% static 'fav/safari-pinned-tab.svg'%}" color="#111313">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#111313">
+    <meta name="theme-color" content="#100f0f">
+    <title>profile</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header class="top-bar">
+        <div class="logo-title">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="Logo">
+            </a>
+            <h2>ToDoList</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'faqs' %}">FAQs</a>
+            <a href="{% url 'profile' %}">Profile</a>
+            <a href="{% url 'about_app' %}">About App</a>
+        </nav>
+        <div id="login-status">
+            <button id="login-button" class="login-btn" type="button">Log In</button>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="title-header">
+                <h1><i class="fas fa-list-check"></i> My Tasks</h1>
+                <h2>Organize your tasks by category</h2>
+            </div>
+            <div class="task">
+                <div class="tabs">
+                    <nav class="task-nav">
+                        <button class="tab-btn active" data-category="work">
+                            <i class="fas fa-briefcase"></i> Work
+                        </button>
+                        <button class="tab-btn" data-category="personal">
+                            <i class="fas fa-user"></i> Personal
+                        </button>
+                        <button class="tab-btn" data-category="education">
+                            <i class="fas fa-graduation-cap"></i> Education
+                        </button>
+                        <button class="tab-btn" data-category="management">
+                            <i class="fas fa-tasks"></i> Management
+                        </button>
+                        <button class="tab-btn" data-category="marketing_sales">
+                            <i class="fas fa-chart-line"></i> Marketing & Sales
+                        </button>
+                        <button class="tab-btn" data-category="customer_support">
+                            <i class="fas fa-headset"></i> Customer Support
+                        </button>
+                        <button class="tab-btn" data-category="create_task">
+                            <i class="fas fa-plus"></i> Create Task
+                        </button>
+                    </nav>
+                    <div class="panels">
+                        <div class="panel active" id="work"></div>
+                        <div class="panel" id="personal"></div>
+                        <div class="panel" id="education"></div>
+                        <div class="panel" id="management"></div>
+                        <div class="panel" id="marketing_sales"></div>
+                        <div class="panel" id="customer_support"></div>
+                        <div class="panel" id="create_task">
+                            <div class="to-do-form">
+                                <form class="form" id="create-task-form">
+                                    <p class="title">New Task</p>
+                                    <p class="message">Please fill out the form to create a new task.</p>
+
+                                    <label>
+                                        <input class="input" type="text" placeholder="Enter task title" required="">
+                                        <span>Task Title</span>
+                                    </label>
+
+                                    <label>
+                                        <select class="input" required="">
+                                            <option value="" disabled selected>Select category</option>
+                                            <option value="work">Work</option>
+                                            <option value="personal">Personal</option>
+                                            <option value="education">Education</option>
+                                            <option value="management">Management</option>
+                                            <option value="marketing_sales">Marketing & Sales</option>
+                                            <option value="customer_support">Customer Support</option>
+                                        </select>
+                                        <span>Category</span>
+                                    </label>
+
+                                    <label>
+                                        <textarea class="input" placeholder="Enter task description" required=""></textarea>
+                                        <span>Task Description</span>
+                                    </label>
+
+                                    <button class="submit" type="submit">Create Task</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="{% static 'js/particles.js' %}"></script>
+    <script src="{% static 'js/profile.js'%}"></script>
+</body>
+</html>

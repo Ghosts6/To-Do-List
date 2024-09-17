@@ -26,8 +26,7 @@ urlpatterns = [
     path('check_authenticated/', views.check_authenticated, name='check_authenticated'),
     path('get_user_profile/', views.get_user_profile, name='get_user_profile'),
     path('logout/', views.logout_view, name='logout'),
-    
-    re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),  
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
 
 if settings.DEBUG:

@@ -95,8 +95,23 @@ def delete_task(request, task_id):
 
 @login_required
 def list_tasks(request):
-    tasks = Task.objects.filter(user=request.user).order_by('-created_at')
-    task_list = [{'id': task.id, 'title': task.title, 'status': task.status, 'category': task.category} for task in tasks]
+    category = request.GET.get('category', None)
+
+    if category:
+        tasks = Task.objects.filter(user=request.user, category=category, status__in=['pending', 'in_progress']).order_by('-created_at')
+    else:
+        tasks = Task.objects.filter(user=request.user, status__in=['pending', 'in_progress']).order_by('-created_at')
+
+    task_list = [
+        {
+            'id': task.id,
+            'title': task.title,
+            'description': task.description,  
+            'status': task.status,
+            'category': task.category
+        } for task in tasks
+    ]
+
     return JsonResponse({'tasks': task_list}, status=200)
 
 @login_required

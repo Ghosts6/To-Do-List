@@ -1728,3 +1728,152 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'login_sining' not found. 'lo
 [2024-09-16 06:00:25] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 7012
 [2024-09-16 06:00:25] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
 [2024-09-16 06:00:25] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:21:21] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-17 07:21:26] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 302 0
+[2024-09-17 07:21:26] [INFO] [django.server:212] "GET /home HTTP/1.1" 301 0
+[2024-09-17 07:21:26] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 7012
+[2024-09-17 07:21:26] [INFO] [django.server:212] "GET /static/css/home.e1ae94e78abb.css HTTP/1.1" 200 2597
+[2024-09-17 07:21:26] [INFO] [django.server:212] "GET /static/js/particles.08453b19a816.js HTTP/1.1" 200 313
+[2024-09-17 07:21:26] [INFO] [django.server:212] "GET /static/img/logo.3e0c68070678.png HTTP/1.1" 200 127375
+[2024-09-17 07:21:26] [INFO] [django.server:212] "GET /static/img/todo-benefits.e2eea31a5609.png HTTP/1.1" 200 883283
+[2024-09-17 07:21:27] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:21:27] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:21:27] [INFO] [django.server:212] "GET /static/fav/favicon-16x16.20672376a414.png HTTP/1.1" 200 12014
+[2024-09-17 07:21:29] [INFO] [django.server:212] "GET / HTTP/1.1" 200 7012
+[2024-09-17 07:21:29] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:21:29] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:21:40] [INFO] [django.server:212] "GET /profile/ HTTP/1.1" 200 6140
+[2024-09-17 07:21:40] [INFO] [django.server:212] "GET /static/css/profile.72848de11fda.css HTTP/1.1" 200 1695
+[2024-09-17 07:21:40] [INFO] [django.server:212] "GET /static/js/profile.dbfc91e04bb9.js HTTP/1.1" 200 2034
+[2024-09-17 07:21:40] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:40] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:40] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:40] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:40] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=work HTTP/1.1" 404 1169
+[2024-09-17 07:21:40] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:40] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:40] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=education HTTP/1.1" 404 1169
+[2024-09-17 07:21:40] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=personal HTTP/1.1" 404 1169
+[2024-09-17 07:21:40] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=management HTTP/1.1" 404 1169
+[2024-09-17 07:21:40] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=marketing_sales HTTP/1.1" 404 1169
+[2024-09-17 07:21:40] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=customer_support HTTP/1.1" 404 1169
+[2024-09-17 07:21:40] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:21:40] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:21:42] [WARNING] [django.request:241] Not Found: /favicon.ico
+[2024-09-17 07:21:42] [WARNING] [django.server:212] "GET /favicon.ico HTTP/1.1" 404 1169
+[2024-09-17 07:21:45] [INFO] [django.server:212] "GET /profile/ HTTP/1.1" 200 6140
+[2024-09-17 07:21:45] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:45] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:45] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:45] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:45] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:45] [WARNING] [django.request:241] Not Found: /tasks/list_tasks/
+[2024-09-17 07:21:45] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=work HTTP/1.1" 404 1169
+[2024-09-17 07:21:45] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=personal HTTP/1.1" 404 1169
+[2024-09-17 07:21:45] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=education HTTP/1.1" 404 1169
+[2024-09-17 07:21:45] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=management HTTP/1.1" 404 1169
+[2024-09-17 07:21:45] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=marketing_sales HTTP/1.1" 404 1169
+[2024-09-17 07:21:45] [WARNING] [django.server:212] "GET /tasks/list_tasks/?category=customer_support HTTP/1.1" 404 1169
+[2024-09-17 07:21:45] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:21:45] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:26:51] [INFO] [django.utils.autoreload:266] /home/ghost/Desktop/project/github_clone/to_do_list/to_do_list/service/urls.py changed, reloading.
+[2024-09-17 07:26:51] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-17 07:27:03] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-17 07:27:08] [INFO] [django.server:212] "GET /profile/ HTTP/1.1" 200 6140
+[2024-09-17 07:27:09] [INFO] [django.server:212] "GET /static/js/profile.99a9f2a4fc7b.js HTTP/1.1" 200 1908
+[2024-09-17 07:27:09] [INFO] [django.server:212] "GET /tasks/?category=marketing_sales HTTP/1.1" 200 13
+[2024-09-17 07:27:09] [INFO] [django.server:212] "GET /tasks/?category=management HTTP/1.1" 200 13
+[2024-09-17 07:27:09] [INFO] [django.server:212] "GET /tasks/?category=work HTTP/1.1" 200 13
+[2024-09-17 07:27:09] [INFO] [django.server:212] "GET /tasks/?category=personal HTTP/1.1" 200 13
+[2024-09-17 07:27:09] [INFO] [django.server:212] "GET /tasks/?category=education HTTP/1.1" 200 134
+[2024-09-17 07:27:09] [INFO] [django.server:212] "GET /tasks/?category=customer_support HTTP/1.1" 200 13
+[2024-09-17 07:27:09] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:27:09] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:27:41] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-17 07:27:43] [INFO] [django.server:212] "GET /profile/ HTTP/1.1" 200 6140
+[2024-09-17 07:27:43] [INFO] [django.server:212] "GET /static/js/profile.549db0773c43.js HTTP/1.1" 200 1895
+[2024-09-17 07:27:43] [INFO] [django.server:212] "GET /tasks/?category=personal HTTP/1.1" 200 13
+[2024-09-17 07:27:43] [INFO] [django.server:212] "GET /tasks/?category=work HTTP/1.1" 200 13
+[2024-09-17 07:27:43] [INFO] [django.server:212] "GET /tasks/?category=education HTTP/1.1" 200 134
+[2024-09-17 07:27:43] [INFO] [django.server:212] "GET /tasks/?category=management HTTP/1.1" 200 13
+[2024-09-17 07:27:43] [INFO] [django.server:212] "GET /tasks/?category=marketing_sales HTTP/1.1" 200 13
+[2024-09-17 07:27:43] [INFO] [django.server:212] "GET /tasks/?category=customer_support HTTP/1.1" 200 13
+[2024-09-17 07:27:43] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:27:43] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:28:09] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-17 07:28:12] [INFO] [django.server:212] "GET /profile/ HTTP/1.1" 200 6140
+[2024-09-17 07:28:12] [INFO] [django.server:212] "GET /static/js/profile.9a382985f52b.js HTTP/1.1" 200 2054
+[2024-09-17 07:28:12] [INFO] [django.server:212] "GET /tasks/?category=work HTTP/1.1" 200 13
+[2024-09-17 07:28:12] [INFO] [django.server:212] "GET /tasks/?category=personal HTTP/1.1" 200 13
+[2024-09-17 07:28:12] [INFO] [django.server:212] "GET /tasks/?category=education HTTP/1.1" 200 134
+[2024-09-17 07:28:12] [INFO] [django.server:212] "GET /tasks/?category=marketing_sales HTTP/1.1" 200 13
+[2024-09-17 07:28:12] [INFO] [django.server:212] "GET /tasks/?category=customer_support HTTP/1.1" 200 13
+[2024-09-17 07:28:12] [INFO] [django.server:212] "GET /tasks/?category=management HTTP/1.1" 200 13
+[2024-09-17 07:28:12] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:28:12] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:28:33] [INFO] [django.server:212] "GET /login/ HTTP/1.1" 302 0
+[2024-09-17 07:28:33] [INFO] [django.server:212] "GET /home/ HTTP/1.1" 200 7012
+[2024-09-17 07:28:33] [INFO] [django.server:212] "GET /static/img/logo.3e0c68070678.png HTTP/1.1" 200 127375
+[2024-09-17 07:28:33] [INFO] [django.server:212] "GET /static/img/todo-benefits.e2eea31a5609.png HTTP/1.1" 200 883283
+[2024-09-17 07:28:33] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:28:33] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:28:36] [INFO] [django.server:212] "GET /admin/ HTTP/1.1" 200 9932
+[2024-09-17 07:28:36] [INFO] [django.server:212] "GET /static/admin/css/dark_mode.ef27a31af300.css HTTP/1.1" 200 669
+[2024-09-17 07:28:36] [INFO] [django.server:212] "GET /static/admin/css/dashboard.e90f2068217b.css HTTP/1.1" 200 185
+[2024-09-17 07:28:36] [INFO] [django.server:212] "GET /static/admin/css/nav_sidebar.269a1bd44627.css HTTP/1.1" 200 625
+[2024-09-17 07:28:36] [INFO] [django.server:212] "GET /static/admin/css/base.64976e0f7339.css HTTP/1.1" 200 4149
+[2024-09-17 07:28:36] [INFO] [django.server:212] "GET /static/admin/css/responsive.107cd2690311.css HTTP/1.1" 200 2963
+[2024-09-17 07:28:36] [INFO] [django.server:212] "GET /static/admin/img/icon-addlink.d519b3bab011.svg HTTP/1.1" 200 178
+[2024-09-17 07:28:36] [INFO] [django.server:212] "GET /static/admin/img/icon-changelink.18d2fd706348.svg HTTP/1.1" 200 252
+[2024-09-17 07:28:36] [INFO] [django.server:212] "GET /static/admin/img/icon-deletelink.564ef9dc3854.svg HTTP/1.1" 200 195
+[2024-09-17 07:28:38] [INFO] [django.server:212] "GET /admin/service/task/ HTTP/1.1" 200 12600
+[2024-09-17 07:28:38] [INFO] [django.server:212] "GET /static/admin/css/changelists.9237a1ac391b.css HTTP/1.1" 200 1274
+[2024-09-17 07:28:38] [INFO] [django.server:212] "GET /static/admin/js/jquery.init.b7781a0897fc.js HTTP/1.1" 200 194
+[2024-09-17 07:28:38] [INFO] [django.server:212] "GET /static/admin/js/filters.0e360b7a9f80.js HTTP/1.1" 200 392
+[2024-09-17 07:28:38] [INFO] [django.server:212] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-09-17 07:28:38] [INFO] [django.server:212] "GET /static/admin/img/search.7cf54ff789c6.svg HTTP/1.1" 200 241
+[2024-09-17 07:28:38] [INFO] [django.server:212] "GET /static/admin/img/tooltag-add.e59d620a9742.svg HTTP/1.1" 200 182
+[2024-09-17 07:30:07] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-17 07:30:10] [INFO] [django.server:212] "GET /profile/ HTTP/1.1" 200 6140
+[2024-09-17 07:30:10] [INFO] [django.server:212] "GET /static/js/profile.0f2ed55444f2.js HTTP/1.1" 200 2062
+[2024-09-17 07:30:10] [INFO] [django.server:212] "GET /tasks/?category=personal HTTP/1.1" 200 13
+[2024-09-17 07:30:10] [INFO] [django.server:212] "GET /tasks/?category=work HTTP/1.1" 200 13
+[2024-09-17 07:30:10] [INFO] [django.server:212] "GET /tasks/?category=education HTTP/1.1" 200 134
+[2024-09-17 07:30:10] [INFO] [django.server:212] "GET /tasks/?category=customer_support HTTP/1.1" 200 13
+[2024-09-17 07:30:10] [INFO] [django.server:212] "GET /tasks/?category=management HTTP/1.1" 200 13
+[2024-09-17 07:30:10] [INFO] [django.server:212] "GET /tasks/?category=marketing_sales HTTP/1.1" 200 13
+[2024-09-17 07:30:10] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:30:10] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:30:56] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-17 07:30:59] [INFO] [django.server:212] "GET /profile/ HTTP/1.1" 200 6140
+[2024-09-17 07:30:59] [INFO] [django.server:212] "GET /static/js/profile.64a7ed237475.js HTTP/1.1" 200 2084
+[2024-09-17 07:30:59] [INFO] [django.server:212] "GET /tasks/?category=work HTTP/1.1" 200 13
+[2024-09-17 07:30:59] [INFO] [django.server:212] "GET /tasks/?category=personal HTTP/1.1" 200 13
+[2024-09-17 07:30:59] [INFO] [django.server:212] "GET /tasks/?category=education HTTP/1.1" 200 134
+[2024-09-17 07:30:59] [INFO] [django.server:212] "GET /tasks/?category=management HTTP/1.1" 200 13
+[2024-09-17 07:30:59] [INFO] [django.server:212] "GET /tasks/?category=customer_support HTTP/1.1" 200 13
+[2024-09-17 07:30:59] [INFO] [django.server:212] "GET /tasks/?category=marketing_sales HTTP/1.1" 200 13
+[2024-09-17 07:30:59] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:30:59] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:31:04] [INFO] [django.server:212] "POST /tasks/create/ HTTP/1.1" 201 54
+[2024-09-17 07:31:13] [INFO] [django.server:212] "GET /profile/ HTTP/1.1" 200 6140
+[2024-09-17 07:31:13] [INFO] [django.server:212] "GET /tasks/?category=customer_support HTTP/1.1" 200 13
+[2024-09-17 07:31:13] [INFO] [django.server:212] "GET /tasks/?category=marketing_sales HTTP/1.1" 200 13
+[2024-09-17 07:31:13] [INFO] [django.server:212] "GET /tasks/?category=education HTTP/1.1" 200 134
+[2024-09-17 07:31:13] [INFO] [django.server:212] "GET /tasks/?category=work HTTP/1.1" 200 13
+[2024-09-17 07:31:13] [INFO] [django.server:212] "GET /tasks/?category=personal HTTP/1.1" 200 13
+[2024-09-17 07:31:13] [INFO] [django.server:212] "GET /tasks/?category=management HTTP/1.1" 200 134
+[2024-09-17 07:31:13] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:31:13] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
+[2024-09-17 07:33:05] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-17 07:33:11] [INFO] [django.utils.autoreload:668] Watching for file changes with StatReloader
+[2024-09-17 07:33:14] [INFO] [django.server:212] "GET /profile/ HTTP/1.1" 200 6140
+[2024-09-17 07:33:14] [INFO] [django.server:212] "GET /static/js/profile.d7af087f212b.js HTTP/1.1" 200 2083
+[2024-09-17 07:33:14] [INFO] [django.server:212] "GET /tasks/?category=work HTTP/1.1" 200 13
+[2024-09-17 07:33:14] [INFO] [django.server:212] "GET /tasks/?category=personal HTTP/1.1" 200 13
+[2024-09-17 07:33:14] [INFO] [django.server:212] "GET /tasks/?category=education HTTP/1.1" 200 134
+[2024-09-17 07:33:14] [INFO] [django.server:212] "GET /tasks/?category=marketing_sales HTTP/1.1" 200 13
+[2024-09-17 07:33:14] [INFO] [django.server:212] "GET /tasks/?category=management HTTP/1.1" 200 134
+[2024-09-17 07:33:14] [INFO] [django.server:212] "GET /tasks/?category=customer_support HTTP/1.1" 200 13
+[2024-09-17 07:33:14] [INFO] [django.server:212] "GET /check_authenticated/ HTTP/1.1" 200 26
+[2024-09-17 07:33:14] [INFO] [django.server:212] "GET /get_user_profile/ HTTP/1.1" 200 21
