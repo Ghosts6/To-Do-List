@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const deleteButtons = document.querySelectorAll('.delete-task');
     const csrfToken = getCookie('csrftoken');
     const tabButtons = document.querySelectorAll('.tab-btn');
     const toggleButtons = document.querySelectorAll('.toggle-desc');
@@ -28,6 +29,62 @@ document.addEventListener('DOMContentLoaded', function() {
                 fullDescription.style.display = 'none';
                 this.classList.remove('fa-chevron-up');
                 this.classList.add('fa-chevron-down'); 
+            }
+        });
+    });
+
+    deleteButtons.forEach(deleteButton => {
+        deleteButton.addEventListener('click', async function() {
+            const taskItem = this.closest('.task-item');
+            const taskId = taskItem.getAttribute('data-task-id');
+
+            if (!taskId) {
+                console.error('Task ID not found');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Task ID not found!',
+                });
+                return;
+            }
+
+            try {
+                const csrfToken = getCookie('csrftoken'); 
+
+                const response = await fetch(`/tasks/delete/${taskId}/`, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRFToken': csrfToken,  
+                    },
+                });
+
+                const data = await response.json();
+
+                if (response.status === 200) {
+                    taskItem.remove();  
+
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Deleted!',
+                        text: 'Task deleted successfully.',
+                        timer: 1500,  
+                        showConfirmButton: false,
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: data.error || 'Error deleting task',
+                    });
+                }
+            } catch (error) {
+                console.error('Error deleting task:', error);
+
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Something went wrong while deleting the task.',
+                });
             }
         });
     });
@@ -146,67 +203,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function attachTaskEventListeners() {
-        const deleteButtons = document.querySelectorAll('.delete-task');
         const editButtons = document.querySelectorAll('.edit-task');
         const confirmButtons = document.querySelectorAll('.confirm-task');
         const discardButtons = document.querySelectorAll('.discard-task');
         const toggleButtons = document.querySelectorAll('.toggle-desc');
-
-        deleteButtons.forEach(deleteButton => {
-            deleteButton.addEventListener('click', async function() {
-                const taskItem = this.closest('.task-item');
-                const taskId = taskItem.getAttribute('data-task-id');
-
-                if (!taskId) {
-                    console.error('Task ID not found');
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: 'Task ID not found!',
-                    });
-                    return;
-                }
-
-                try {
-                    const csrfToken = getCookie('csrftoken'); 
-
-                    const response = await fetch(`/tasks/${taskId}/delete/`, {
-                        method: 'DELETE',
-                        headers: {
-                            'X-CSRFToken': csrfToken,  
-                        },
-                    });
-
-                    const data = await response.json();
-
-                    if (response.status === 200) {
-                        taskItem.remove();  
-
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Deleted!',
-                            text: 'Task deleted successfully.',
-                            timer: 1500,  
-                            showConfirmButton: false,
-                        });
-                    } else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error',
-                            text: data.error || 'Error deleting task',
-                        });
-                    }
-                } catch (error) {
-                    console.error('Error deleting task:', error);
-
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: 'Something went wrong while deleting the task.',
-                    });
-                }
-            });
-        });
 
         editButtons.forEach(editButton => {
             editButton.addEventListener('click', function() {

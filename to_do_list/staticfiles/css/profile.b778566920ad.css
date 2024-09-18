@@ -82,8 +82,6 @@ body {
     gap: 20px;
     padding: 10px;
     background-color: var(--main-bg-color);
-    z-index: 999;
-    position: relative;
 }
 
 .logo-title {
@@ -303,7 +301,6 @@ main {
   color: var(--secondary-highlight);
   flex-grow: 1;
   white-space: nowrap;
-  max-width: 50vh !important;
 }
 
 .task-status {
@@ -351,7 +348,7 @@ main {
 
 .edit-input,
 .edit-select {
-  width: 25vh;
+  width: 35vh;
   height: 25px;
 }
 
@@ -375,10 +372,6 @@ main {
     border-radius: 5px;
     color: var(--highlight-color);
     transition: border-color 0.3s ease;
-    position: relative;
-    left: 10%;
-    transform: translate(-50%);
-
 }
 
 
@@ -399,21 +392,34 @@ main {
 .discard-task {
     cursor: pointer;
     color: var(--error-red) !important;
-    transition: color 0.3s ease, transform 0.2s ease!important;
+    transition: color 0.3s ease, transform 0.2s ease; 
 }
 
 .discard-task:hover {
-    color: var(--error-hover-color)!important; 
-    transform: scale(1.1); 
-}
-
-.confirm-task:hover{
+    color: var(--error-hover-color); 
     transform: scale(1.1); 
 }
 
 .discard-task:active,
 .confirm-task:active {
-    transform: scale(0.95)!important; 
+    transform: scale(0.95); 
+}
+
+.pepe {
+    animation-name: pepe;
+    animation-duration: 1.5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+    display: inline-block; 
+}
+
+@keyframes pepe {
+    0%, 33%, 66%, 100% {
+        transform: rotate(4deg);
+    }
+    16%, 50%, 83% {
+        transform: rotate(-4deg);
+    }
 }
 
 .form {

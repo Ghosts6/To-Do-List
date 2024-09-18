@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-btn');
     const toggleButtons = document.querySelectorAll('.toggle-desc');
     const panels = document.querySelectorAll('.panel');
-    const deleteButtons = document.querySelectorAll('.delete-task');
 
     tabButtons.forEach((button) => {
         button.addEventListener('click', function() {
@@ -94,40 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    deleteButtons.forEach(deleteButton => {
-        deleteButton.addEventListener('click', async function() {
-            const taskItem = this.closest('.task-item'); 
-            const taskId = taskItem.getAttribute('data-task-id'); 
-
-            if (!taskId) {
-                console.error('Task ID not found');
-                return;
-            }
-
-            try {
-                const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-                const response = await fetch(`/tasks/delete/${taskId}/`, {
-                    method: 'DELETE',
-                    headers: {
-                        'X-CSRFToken': csrfToken
-                    }
-                });
-
-                const data = await response.json();
-
-                if (response.status === 200) {
-                    taskItem.remove();
-                    alert('Task deleted successfully');
-                } else {
-                    alert(data.error || 'Error deleting task');
-                }
-            } catch (error) {
-                console.error('Error deleting task:', error);
-                alert('Something went wrong while deleting the task.');
-            }
-        });
-    });
-
     function populateTasks(category) {
         fetch(`/tasks/?category=${category}`)
             .then(response => {
@@ -160,6 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <i class="fas fa-edit edit-task" title="Edit Task"></i>
                                     <i class="fas fa-trash delete-task" title="Delete Task"></i>
                                     <i class="fas fa-chevron-down toggle-desc" title="Expand"></i>
+                                    <i class="fas fa-check-circle confirm-task" style="display: none;" title="Confirm Changes"></i>
+                                    <i class="fas fa-times-circle discard-task" style="display: none;" title="Discard Changes"></i>
                                 </div>
                             </div>
                             <div class="task-desc-full" style="display: none;">
@@ -180,6 +147,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function attachTaskEventListeners() {
         const deleteButtons = document.querySelectorAll('.delete-task');
+        const editButtons = document.querySelectorAll('.edit-task');
+        const confirmButtons = document.querySelectorAll('.confirm-task');
+        const discardButtons = document.querySelectorAll('.discard-task');
+        const toggleButtons = document.querySelectorAll('.toggle-desc');
+
         deleteButtons.forEach(deleteButton => {
             deleteButton.addEventListener('click', async function() {
                 const taskItem = this.closest('.task-item');
@@ -187,34 +159,76 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (!taskId) {
                     console.error('Task ID not found');
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Task ID not found!',
+                    });
                     return;
                 }
 
                 try {
-                    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-                    const response = await fetch(`/tasks/delete/${taskId}/`, {
+                    const csrfToken = getCookie('csrftoken'); 
+
+                    const response = await fetch(`/tasks/${taskId}/delete/`, {
                         method: 'DELETE',
                         headers: {
-                            'X-CSRFToken': csrfToken
-                        }
+                            'X-CSRFToken': csrfToken,  
+                        },
                     });
 
                     const data = await response.json();
 
                     if (response.status === 200) {
                         taskItem.remove();  
-                        alert('Task deleted successfully');
+
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Deleted!',
+                            text: 'Task deleted successfully.',
+                            timer: 1500,  
+                            showConfirmButton: false,
+                        });
                     } else {
-                        alert(data.error || 'Error deleting task');
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: data.error || 'Error deleting task',
+                        });
                     }
                 } catch (error) {
                     console.error('Error deleting task:', error);
-                    alert('Something went wrong while deleting the task.');
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Something went wrong while deleting the task.',
+                    });
                 }
             });
         });
 
-        const toggleButtons = document.querySelectorAll('.toggle-desc');
+        editButtons.forEach(editButton => {
+            editButton.addEventListener('click', function() {
+                const taskItem = this.closest('.task-item');
+                enableEditMode(taskItem);
+            });
+        });
+
+        confirmButtons.forEach(confirmButton => {
+            confirmButton.addEventListener('click', function() {
+                const taskItem = this.closest('.task-item');
+                confirmChanges(taskItem);
+            });
+        });
+
+        discardButtons.forEach(discardButton => {
+            discardButton.addEventListener('click', function() {
+                const taskItem = this.closest('.task-item');
+                discardChanges(taskItem);
+            });
+        });
+
         toggleButtons.forEach(toggle => {
             toggle.addEventListener('click', function() {
                 const taskItem = this.closest('.task-item');
@@ -236,6 +250,110 @@ document.addEventListener('DOMContentLoaded', function() {
     ['work', 'personal', 'education', 'management', 'marketing_sales', 'customer_support'].forEach(category => {
         populateTasks(category);  
     });
+
+    function enableEditMode(taskItem) {
+        taskItem.querySelector('.fa-edit').style.display = 'none';
+        taskItem.querySelector('.fa-trash').style.display = 'none';
+        taskItem.querySelector('.fa-chevron-down').style.display = 'none';
+        taskItem.querySelector('.confirm-task').style.display = 'inline-block';
+        taskItem.querySelector('.discard-task').style.display = 'inline-block';
+
+        const taskTitle = taskItem.querySelector('.task-title').textContent.trim();
+        const taskDesc = taskItem.querySelector('.task-desc-short').textContent.trim().slice(0, -3);
+        const taskStatus = taskItem.querySelector('.task-status span').textContent.trim().toLowerCase().replace(' ', '_');
+
+        taskItem.querySelector('.task-title').innerHTML = `<input type="text" class="edit-input" value="${taskTitle}" required>`;
+        taskItem.querySelector('.task-desc-short').innerHTML = `<textarea class="edit-input" required>${taskDesc}</textarea>`;
+
+        taskItem.querySelector('.task-status span').innerHTML = `
+            <select class="edit-select">
+                <option value="pending" ${taskStatus === 'pending' ? 'selected' : ''}>Pending</option>
+                <option value="in_progress" ${taskStatus === 'in_progress' ? 'selected' : ''}>In Progress</option>
+                <option value="completed" ${taskStatus === 'completed' ? 'selected' : ''}>Completed</option>
+            </select>
+        `;
+    }
+
+    function confirmChanges(taskItem) {
+        const taskId = taskItem.getAttribute('data-task-id');
+        const titleInput = taskItem.querySelector('.task-title input');
+        const descInput = taskItem.querySelector('.task-desc-short textarea');
+        const statusSelect = taskItem.querySelector('.task-status select');
+
+        if (!titleInput.value.trim() || !descInput.value.trim()) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Title and Description cannot be empty!',
+            });
+            return;
+        }
+
+        const updatedData = {
+            title: titleInput.value.trim(),
+            description: descInput.value.trim(),
+            status: statusSelect.value,
+        };
+
+        fetch(`/tasks/${taskId}/update/`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: JSON.stringify(updatedData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: data.error,
+                });
+            } else {
+                taskItem.querySelector('.task-title').innerText = updatedData.title;
+                taskItem.querySelector('.task-desc-short').innerText = updatedData.description.substring(0, 50) + '...';
+                taskItem.querySelector('.task-status span').innerText = updatedData.status.replace('_', ' ');
+
+                taskItem.querySelector('.confirm-task').style.display = 'none';
+                taskItem.querySelector('.discard-task').style.display = 'none';
+                taskItem.querySelector('.fa-edit').style.display = 'inline-block';
+                taskItem.querySelector('.fa-trash').style.display = 'inline-block';
+                taskItem.querySelector('.fa-chevron-down').style.display = 'inline-block';
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Task Updated',
+                    text: 'Your task was updated successfully!',
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error updating task:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Something went wrong while updating the task.',
+            });
+        });
+    }
+
+    function discardChanges(taskItem) {
+        const originalTitle = taskItem.querySelector('.task-title input').value;
+        const originalDesc = taskItem.querySelector('.task-desc-short textarea').value;
+        const originalStatus = taskItem.querySelector('.task-status select').value;
+
+        taskItem.querySelector('.task-title').innerHTML = originalTitle;
+        taskItem.querySelector('.task-desc-short').innerHTML = originalDesc.substring(0, 50) + '...';
+        taskItem.querySelector('.task-status span').innerHTML = originalStatus.replace('_', ' ');
+
+        taskItem.querySelector('.confirm-task').style.display = 'none';
+        taskItem.querySelector('.discard-task').style.display = 'none';
+        taskItem.querySelector('.fa-edit').style.display = 'inline-block';
+        taskItem.querySelector('.fa-trash').style.display = 'inline-block';
+        taskItem.querySelector('.fa-chevron-down').style.display = 'inline-block';
+    }
 
     function getCookie(name) {
         let cookieValue = null;

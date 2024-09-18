@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 try {
                     const csrfToken = getCookie('csrftoken'); 
 
-                    const response = await fetch(`/tasks/${taskId}/delete/`, {
+                    const response = await fetch(`/tasks/delete/${taskId}/`, {
                         method: 'DELETE',
                         headers: {
                             'X-CSRFToken': csrfToken,  

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-btn');
     const toggleButtons = document.querySelectorAll('.toggle-desc');
     const panels = document.querySelectorAll('.panel');
+    const deleteButtons = document.querySelectorAll('.delete-task');
 
     tabButtons.forEach((button) => {
         button.addEventListener('click', function() {
@@ -93,6 +94,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    deleteButtons.forEach(deleteButton => {
+        deleteButton.addEventListener('click', async function() {
+            const taskItem = this.closest('.task-item'); 
+            const taskId = taskItem.getAttribute('data-task-id'); 
+
+            if (!taskId) {
+                console.error('Task ID not found');
+                return;
+            }
+
+            try {
+                const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                const response = await fetch(`/tasks/delete/${taskId}/`, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRFToken': csrfToken
+                    }
+                });
+
+                const data = await response.json();
+
+                if (response.status === 200) {
+                    taskItem.remove();
+                    alert('Task deleted successfully');
+                } else {
+                    alert(data.error || 'Error deleting task');
+                }
+            } catch (error) {
+                console.error('Error deleting task:', error);
+                alert('Something went wrong while deleting the task.');
+            }
+        });
+    });
+
     function populateTasks(category) {
         fetch(`/tasks/?category=${category}`)
             .then(response => {
@@ -159,51 +194,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (!taskId) {
                     console.error('Task ID not found');
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: 'Task ID not found!',
-                    });
                     return;
                 }
 
                 try {
-                    const csrfToken = getCookie('csrftoken'); 
-
-                    const response = await fetch(`/tasks/${taskId}/delete/`, {
+                    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                    const response = await fetch(`/tasks/delete/${taskId}/`, {
                         method: 'DELETE',
                         headers: {
-                            'X-CSRFToken': csrfToken,  
-                        },
+                            'X-CSRFToken': csrfToken
+                        }
                     });
 
                     const data = await response.json();
 
                     if (response.status === 200) {
                         taskItem.remove();  
-
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Deleted!',
-                            text: 'Task deleted successfully.',
-                            timer: 1500,  
-                            showConfirmButton: false,
-                        });
+                        alert('Task deleted successfully');
                     } else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error',
-                            text: data.error || 'Error deleting task',
-                        });
+                        alert(data.error || 'Error deleting task');
                     }
                 } catch (error) {
                     console.error('Error deleting task:', error);
-
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: 'Something went wrong while deleting the task.',
-                    });
+                    alert('Something went wrong while deleting the task.');
                 }
             });
         });
@@ -258,9 +271,9 @@ document.addEventListener('DOMContentLoaded', function() {
         taskItem.querySelector('.confirm-task').style.display = 'inline-block';
         taskItem.querySelector('.discard-task').style.display = 'inline-block';
 
-        const taskTitle = taskItem.querySelector('.task-title').textContent.trim();
-        const taskDesc = taskItem.querySelector('.task-desc-short').textContent.trim().slice(0, -3);
-        const taskStatus = taskItem.querySelector('.task-status span').textContent.trim().toLowerCase().replace(' ', '_');
+        const taskTitle = taskItem.querySelector('.task-title').innerText;
+        const taskDesc = taskItem.querySelector('.task-desc-short').innerText.slice(0, -3);
+        const taskStatus = taskItem.querySelector('.task-status span').innerText.trim().toLowerCase().replace(' ', '_');
 
         taskItem.querySelector('.task-title').innerHTML = `<input type="text" class="edit-input" value="${taskTitle}" required>`;
         taskItem.querySelector('.task-desc-short').innerHTML = `<textarea class="edit-input" required>${taskDesc}</textarea>`;
@@ -295,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
             status: statusSelect.value,
         };
 
-        fetch(`/tasks/${taskId}/update/`, {
+        fetch(`/tasks/update/${taskId}/`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -344,9 +357,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const originalDesc = taskItem.querySelector('.task-desc-short textarea').value;
         const originalStatus = taskItem.querySelector('.task-status select').value;
 
-        taskItem.querySelector('.task-title').innerHTML = originalTitle;
-        taskItem.querySelector('.task-desc-short').innerHTML = originalDesc.substring(0, 50) + '...';
-        taskItem.querySelector('.task-status span').innerHTML = originalStatus.replace('_', ' ');
+        taskItem.querySelector('.task-title').innerText = originalTitle;
+        taskItem.querySelector('.task-desc-short').innerText = originalDesc.substring(0, 50) + '...';
+        taskItem.querySelector('.task-status span').innerText = originalStatus.replace('_', ' ');
 
         taskItem.querySelector('.confirm-task').style.display = 'none';
         taskItem.querySelector('.discard-task').style.display = 'none';

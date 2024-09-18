@@ -82,8 +82,6 @@ body {
     gap: 20px;
     padding: 10px;
     background-color: var(--main-bg-color);
-    z-index: 999;
-    position: relative;
 }
 
 .logo-title {
@@ -303,7 +301,6 @@ main {
   color: var(--secondary-highlight);
   flex-grow: 1;
   white-space: nowrap;
-  max-width: 50vh !important;
 }
 
 .task-status {
@@ -351,7 +348,7 @@ main {
 
 .edit-input,
 .edit-select {
-  width: 25vh;
+  width: 35vh;
   height: 25px;
 }
 
@@ -375,10 +372,6 @@ main {
     border-radius: 5px;
     color: var(--highlight-color);
     transition: border-color 0.3s ease;
-    position: relative;
-    left: 10%;
-    transform: translate(-50%);
-
 }
 
 
@@ -400,6 +393,11 @@ main {
     cursor: pointer;
     color: var(--error-red) !important;
     transition: color 0.3s ease, transform 0.2s ease!important;
+    animation: leSnake 1.5s ease-in-out; animation-iteration-count: infinite
+}
+
+.confirm-task {
+  animation: leSnake 1.5s ease-in-out; animation-iteration-count: infinite
 }
 
 .discard-task:hover {
@@ -414,6 +412,11 @@ main {
 .discard-task:active,
 .confirm-task:active {
     transform: scale(0.95)!important; 
+}
+
+@keyframes leSnake {
+    from, to { transform: translateY(0px) }
+    50% { transform: translateY(30px) }
 }
 
 .form {
