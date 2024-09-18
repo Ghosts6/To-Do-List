@@ -88,6 +88,10 @@ Add FAQ: POST /api/faqs/ - Create a new FAQ.
 Update FAQ: PUT /api/faqs/<id>/ - Update an existing FAQ.
 Delete FAQ: DELETE /api/faqs/<id>/ - Remove an FAQ.
 
+## 📽️ Project Video Demo
+[![Watch the demo](https://github.com/user-attachments/assets/aff565bb-03a4-44d3-8dc1-ceee3a33d1d6)](https://youtu.be/Lv3cPE0Yc0c)
+
+Click the image above to watch a video demonstration of the project.
 
 ## ⚠️ Project Limitations and Goals
 ### Warning: This project is not designed to be responsive.
